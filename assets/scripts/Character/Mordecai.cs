@@ -9,7 +9,21 @@ public class Mordecai : MonoBehaviour
 
 	public string FlyingKickAnimation;
 
+	public string HitAnimation;
+
+	public string DieAnimation;
+
+	public string PowerAnimation;
+
+	public string AssistAnimation;
+
+
+
 	public bool attacking;
+
+	public bool hitted;
+
+	public bool dying;
 
 
 
@@ -26,7 +40,7 @@ public class Mordecai : MonoBehaviour
 
 	void Start() 
 	{
-		attacking = false;
+		attacking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
 		_controller = (CharacterController)GetComponent(typeof(CharacterController));
 	}
@@ -36,6 +50,8 @@ public class Mordecai : MonoBehaviour
 
 	void Update()
 	{
+
+		// atacando - no chao e no ar
 		if( Input.GetKey( KeyCode.O ) && !attacking ) 
 		{
 			if ( _controller.isGrounded ) {
@@ -44,7 +60,20 @@ public class Mordecai : MonoBehaviour
 				StartCoroutine( FlyingKick() );
 			}
 		}
+
+
+		// para testes: animaçao caso seja atingido
+		if( Input.GetKey( KeyCode.I ) )  {
+			StartCoroutine( GetHit() );
+		}
+
+		// para testes: animaçao caso morra
+		if( Input.GetKey( KeyCode.U ) )  {
+			StartCoroutine( Dying() );
+		}
 	}
+
+
 
 
 	IEnumerator Punch() 
@@ -69,6 +98,7 @@ public class Mordecai : MonoBehaviour
 
 
 
+
 	IEnumerator FlyingKick() 
 	{
 		attacking = true;
@@ -78,5 +108,30 @@ public class Mordecai : MonoBehaviour
 		yield break;
 	}
 
+
+
+
+	IEnumerator GetHit()
+	{
+		hitted = true;
+		_animations.CrossFade( HitAnimation );
+		yield return new WaitForSeconds( 0.4f );
+		hitted = false;
+		yield break;
+	}
+
+
+
+
+	IEnumerator Dying()
+	{
+		dying = true;
+		_animations.CrossFade( DieAnimation );
+		yield return new WaitForSeconds( 2 );
+
+		// nao cancela na real, mas para testes, sim
+		dying = false;
+		yield break;
+	}
 
 }
