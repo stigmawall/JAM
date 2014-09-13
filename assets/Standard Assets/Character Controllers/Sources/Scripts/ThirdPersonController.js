@@ -16,6 +16,7 @@ public var landAnimationSpeed : float = 1.0;
 private var _animation : Animation;
 
 
+
 enum CharacterState {
 	Idle = 0,
 	Walking = 1,
@@ -25,6 +26,7 @@ enum CharacterState {
 }
 
 private var _characterState : CharacterState;
+
 
 // The speed when walking
 var walkSpeed = 2.0;
@@ -93,12 +95,16 @@ private var isControllable = true;
 
 
 private var _mordecaiController;
+private var _status;
+
 
 function Awake ()
 {
 	// pegando o mordecai
 	_mordecaiController = GetComponent("Mordecai");
 	
+	// pegando o status
+	_status = GetComponent("Status");
 	
 
 	moveDirection = transform.TransformDirection(Vector3.forward);
@@ -184,7 +190,6 @@ function UpdateSmoothedMovementDirection ()
 			else
 			{
 				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
-				
 				moveDirection = moveDirection.normalized;
 			}
 		}
@@ -201,17 +206,17 @@ function UpdateSmoothedMovementDirection ()
 		// Pick speed modifier
 		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift))
 		{
-			targetSpeed *= runSpeed;
+			targetSpeed *= runSpeed + _status.Speed;
 			_characterState = CharacterState.Running;
 		}
 		else if (Time.time - trotAfterSeconds > walkTimeStart)
 		{
-			targetSpeed *= trotSpeed;
+			targetSpeed *= trotSpeed + _status.Speed;
 			_characterState = CharacterState.Trotting;
 		}
 		else
 		{
-			targetSpeed *= walkSpeed;
+			targetSpeed *= walkSpeed + _status.Speed;
 			_characterState = CharacterState.Walking;
 		}
 		
@@ -327,7 +332,8 @@ function Update() {
 	collisionFlags = controller.Move(movement);
 	
 	// ANIMATION sector
-	if(_animation && !_mordecaiController.attacking ) {
+	// caso nao esteja fazendo uma das animaçoes controladas pelo player como socar e chutar
+	if(_animation && !_mordecaiController.attacking && !_mordecaiController.hitted && !_mordecaiController.dying ) {
 		if(_characterState == CharacterState.Jumping) 
 		{
 			if(!jumpingReachedApex) {
@@ -356,7 +362,7 @@ function Update() {
 					_animation.CrossFade(walkAnimation.name);	
 				}
 				else if(_characterState == CharacterState.Walking) {
-					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed);
+					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed );
 					_animation.CrossFade(walkAnimation.name);	
 				}
 				

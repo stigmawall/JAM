@@ -28,7 +28,7 @@ public class Margareth : MonoBehaviour
 
 	Animation _animations;
 
-
+	Status _status;
 
 
 
@@ -36,6 +36,7 @@ public class Margareth : MonoBehaviour
 	{
 		walking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
+		_status = GetComponent<Status>();
 		//_controller = (CharacterController)GetComponent(typeof(CharacterController));
 	}
 	
@@ -77,6 +78,38 @@ public class Margareth : MonoBehaviour
 		}
 
 	}
+
+
+
+
+
+
+	// STATUS CONTROLLERS
+	public void TakeDamage( float damage ) 
+	{
+		// marca o dano
+		_status.HP -= damage;
+		
+		if( _status.HP <= 0 ) 
+		{
+			//StartCoroutine( Dying() );
+		} else {
+			
+			//StartCoroutine( GetHit() );
+		}
+		
+		// imprime o valor atual
+		Debug.Log ( "DAMAGE MAGGIE - " + _status.HP );
+	}
+	
+	
+	public void Heal( float value ) 
+	{
+		_status.HP += value;
+		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
+		Debug.Log ( "HEAL MAGGIE - " + _status.HP );
+	}
+
 
 
 }

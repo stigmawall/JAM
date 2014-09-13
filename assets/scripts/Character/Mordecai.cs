@@ -3,7 +3,13 @@ using System.Collections;
 
 public class Mordecai : MonoBehaviour 
 {
-	
+
+	/**********************************
+	 * 
+	 * Gerencia estados, animaçoes e funçoes referentes ao personagem principal
+	 * 
+	 *********************************/ 
+
 
 	public string[] AttackAnimations;
 
@@ -18,6 +24,7 @@ public class Mordecai : MonoBehaviour
 	public string AssistAnimation;
 
 
+	
 
 	public bool attacking;
 
@@ -31,6 +38,8 @@ public class Mordecai : MonoBehaviour
 
 	Animation _animations;
 
+	Status _status;
+
 	int _animationCount;
 
 	int _animationPlayed;
@@ -43,6 +52,7 @@ public class Mordecai : MonoBehaviour
 		attacking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
 		_controller = (CharacterController)GetComponent(typeof(CharacterController));
+		_status = GetComponent<Status>();
 	}
 	
 
@@ -54,7 +64,7 @@ public class Mordecai : MonoBehaviour
 		// atacando - no chao e no ar
 		if( Input.GetKey( KeyCode.O ) && !attacking ) 
 		{
-			if ( _controller.isGrounded ) {
+			if ( _controller.isGrounded || _controller.velocity.y==0 ) {
 				StartCoroutine( Punch() );
 			} else {
 				StartCoroutine( FlyingKick() );
@@ -76,9 +86,46 @@ public class Mordecai : MonoBehaviour
 
 
 
+
+	// STATUS CONTROLLERS
+	public void TakeDamage( float damage ) 
+	{
+
+		// marca o dano
+		_status.HP -= damage;
+
+		if( _status.HP <= 0 ) 
+		{
+			StartCoroutine( Dying() );
+		} else {
+
+			StartCoroutine( GetHit() );
+		}
+
+		// imprime o valor atual
+		Debug.Log ( "DAMAGE - " + _status.HP );
+	}
+
+
+	public void Heal( float value ) 
+	{
+		_status.HP += value;
+		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
+		Debug.Log ( "HEAL - " + _status.HP );
+	}
+
+
+
+
+	// ANIMATION CONTROLLERS
+
+	/// <summary>
+	/// Punch animation controller.
+	/// </summary>
 	IEnumerator Punch() 
 	{
 		attacking = true;
+
 
 		// primeiro soco
 		_animations.CrossFade( AttackAnimations[ _animationCount ] );
@@ -89,6 +136,7 @@ public class Mordecai : MonoBehaviour
 		_animationPlayed++;
 		attacking = false;
 
+
 		if( _animationPlayed >=  AttackAnimations.Length ) 
 			_animationCount = _animationPlayed =  0;
 
@@ -98,7 +146,9 @@ public class Mordecai : MonoBehaviour
 
 
 
-
+	/// <summary>
+	/// Flying kick animation - when he's jumping.
+	/// </summary>
 	IEnumerator FlyingKick() 
 	{
 		attacking = true;
@@ -111,6 +161,9 @@ public class Mordecai : MonoBehaviour
 
 
 
+	/// <summary>
+	/// Animate him taking hit.
+	/// </summary>
 	IEnumerator GetHit()
 	{
 		hitted = true;
@@ -123,6 +176,10 @@ public class Mordecai : MonoBehaviour
 
 
 
+
+	/// <summary>
+	/// Animate the payer to die
+	/// </summary>
 	IEnumerator Dying()
 	{
 		dying = true;
