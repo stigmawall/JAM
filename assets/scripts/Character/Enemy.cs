@@ -93,8 +93,11 @@ public class Enemy : MonoBehaviour
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0; 
 		//transform.LookAt( target );
-		if( dir.x < 0 ) transform.LookAt( Vector3.forward );
-		else transform.LookAt( Vector3.back );
+
+		if( dir.x < 0 ) 
+			iTween.RotateTo(gameObject,iTween.Hash("y",-90,"time",0.1f));
+		else 
+			iTween.RotateTo(gameObject,iTween.Hash("y",90,"time",0.1f));
 
 
 		if (dir.magnitude > distance )
