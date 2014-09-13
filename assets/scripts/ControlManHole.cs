@@ -37,14 +37,16 @@ public class ControlManHole : MonoBehaviour {
 		}	
 	}
 	
-	void OnCollisionEnter(Collision collision){
-		if(collision.gameObject.layer == 8 )//"Player"
+	void OnTriggerEnter(Collider collision){
+
+		Debug.Log ("chegou!");
+		if(collision.gameObject.layer ==9 )//"Player"
 		{
 			action = actionOnCollide;
 
-			//Debug.Log (action);
 			//abre porta
 			if(action == Action.open ){
+				Debug.Log ("ENTROU!");
 				if(target){
 					Hashtable ht = new Hashtable();
 					ht.Add("x", posOpen);

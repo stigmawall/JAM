@@ -40,17 +40,16 @@ public class Margareth : MonoBehaviour
 
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
-		dir.y = 0;
-
-		if (target.position.y >= limit) {
-			if (dir.x < 0)
-				transform.LookAt (Vector3.forward);
-			else
-				transform.LookAt (Vector3.back);
-		}
+		dir.y = 0; 
+		//transform.LookAt( target );
+		
+		if( dir.x < 0 ) 
+			iTween.RotateTo(gameObject,iTween.Hash("y",-90,"time",0.1f));
+		else 
+			iTween.RotateTo(gameObject,iTween.Hash("y",90,"time",0.1f));
 
 		//transform.LookAt( targetWithoutY );
-		Debug.Log (target.position.y);
+		//Debug.Log (target.position.y);
 
 
 
