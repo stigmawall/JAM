@@ -14,6 +14,10 @@ public class CharacterBeatenUp : MonoBehaviour {
 	public float x = 0.0F;
 	public float z = 0.0F;
 
+
+	bool antGround = false;
+
+
 	public enum CharacterState {
 		Idle,
 		Walking,
@@ -28,13 +32,20 @@ public class CharacterBeatenUp : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		x = 0.0F;
 		z = 0.0F;
 
 		CharacterController controller = GetComponent<CharacterController>();
-		if (controller.isGrounded) {
+
+
+
+		if (controller.isGrounded && !hero.attacking ) //esta no chao
+		{
 			Event e = Event.current;
+			state = CharacterState.Idle;
+
 
 			if (  Input.GetKey (KeyCode.W)) {
 				z = speed;
@@ -47,14 +58,14 @@ public class CharacterBeatenUp : MonoBehaviour {
 			}
 
 			if (Input.GetKey (KeyCode.A)) {
-				iTween.RotateTo(gameObject,iTween.Hash("y",-134.9937,"time",0.3f));
+				iTween.RotateTo(gameObject,iTween.Hash("y",-90,"time",0.1f));
 				x = speed*-1;
 				state = CharacterState.Walking;
 			}
 		
 
 			if (Input.GetKey (KeyCode.D)) {
-				iTween.RotateTo(gameObject,iTween.Hash("y",58.022,"time",0.3f));
+				iTween.RotateTo(gameObject,iTween.Hash("y",90,"time",0.1f));
 				x = speed;
 				state = CharacterState.Walking;
 			}
@@ -63,18 +74,24 @@ public class CharacterBeatenUp : MonoBehaviour {
 			moveDirection.z = z;
 
 
-			if (Input.GetButton("Jump") ){
+			if (Input.GetButton("Jump") )
+			{
 				//moveDirection = Vector3.zero;
 				moveDirection.y = jumpSpeed;
 				state = CharacterState.Jumping;
 			}
 
 			hero.animateState(state);
+		} 
 
-		}
+
 		moveDirection.y -= gravity * Time.deltaTime;
 		controller.Move(moveDirection * Time.deltaTime);
-		if( state == CharacterState.Walking ){
+
+
+		if( state == CharacterState.Walking ) 
+		{
+			hero.isStand = false;
 			state = CharacterState.Idle;
 			moveDirection = Vector3.zero;
 		}

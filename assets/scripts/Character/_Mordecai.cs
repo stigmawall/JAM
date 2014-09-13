@@ -23,13 +23,10 @@ public class Mordecai : MonoBehaviour
 
 	public string AssistAnimation;
 
-	public int runMaxAnimationSpeed = 1;
 
 	public string WalkAnimation;
 
 	public string JumpAnimation;
-
-	public string IdleAnimation;
 
 	public bool attacking;
 
@@ -51,14 +48,12 @@ public class Mordecai : MonoBehaviour
 
 	int _animationPlayed;
 
-	public bool isStand;
+	public int runMaxAnimationSpeed = 1;
 
 
 	void Start() 
 	{
 		attacking = hitted = dying = false;
-		_animationCount = _animationPlayed = 0;
-		isStand = true;
 		_animations = (Animation)GetComponent(typeof(Animation));
 		_controller = (CharacterController)GetComponent(typeof(CharacterController));
 		_status = GetComponent<Status>();
@@ -66,42 +61,31 @@ public class Mordecai : MonoBehaviour
 	}
 	
 
-
-
-	public void animateState(CharacterBeatenUp.CharacterState state )
-	{
+	public void animateState(CharacterBeatenUp.CharacterState state ){
 
 		_animations = (Animation)GetComponent(typeof(Animation));
-		CharacterController controller = GetComponent<CharacterController>();
-
-
-		// se estiver atacando, controla no update
-		if( attacking || hitted || dying ) return;
-
-
-		// controla animaçoes de andar, pular e stand
 		if(state == CharacterBeatenUp.CharacterState.Jumping) 
 		{
-			isStand = false;
-			//_animations[JumpAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
-			_animations.CrossFade(JumpAnimation);
-
+			CharacterController controller = GetComponent<CharacterController>();
+			_animations[JumpAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
+			_animations.CrossFade(JumpAnimation);	
+			/*
+			if(!jumpingReachedApex) {
+				_animations[jumpPoseAnimation.name].speed = jumpAnimationSpeed;
+				_animations[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
+				_animations.CrossFade(jumpPoseAnimation.name);
+			} else {
+				_animations[jumpPoseAnimation.name].speed = -landAnimationSpeed;
+				_animations[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
+				_animations.CrossFade(jumpPoseAnimation.name);				
+			}
+			*/
 		} 
-		else if (state == CharacterBeatenUp.CharacterState.Walking) {
-			 
-			isStand = false;
-			//_animations[WalkAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
+		if (state == CharacterBeatenUp.CharacterState.Walking) {
+			CharacterController controller = GetComponent<CharacterController>();
+			_animations[WalkAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
 			_animations.CrossFade(WalkAnimation);	
 
-		}
-		else if( !isStand ) 
-		{
-			isStand = true;
-			//_animations[WalkAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
-			_animations[IdleAnimation].wrapMode = WrapMode.Loop;
-			_animations.CrossFade( IdleAnimation );
 		}
 	}
 
@@ -109,11 +93,10 @@ public class Mordecai : MonoBehaviour
 
 	void Update()
 	{
+
 		// atacando - no chao e no ar
 		if( Input.GetKey( KeyCode.O ) && !attacking ) 
 		{
-			isStand = false;
-
 			if ( _controller.isGrounded || _controller.velocity.y==0 ) {
 				StartCoroutine( Punch() );
 			} else {
@@ -179,11 +162,12 @@ public class Mordecai : MonoBehaviour
 	{
 		attacking = true;
 
+
+
+
+		Debug.Log (_animationCount);
 		// primeiro soco
-
-		Debug.Log ( AttackAnimations[ _animationCount ] );
-
-		_animations.Play( AttackAnimations[ _animationCount ] );
+		_animations.CrossFade( AttackAnimations[ _animationCount ] );
 		_animationCount++;
 
 
@@ -194,12 +178,13 @@ public class Mordecai : MonoBehaviour
 
 		yield return new WaitForSeconds( 0.3f );
 
+
 		_punch.active = false;
 		_animationPlayed++;
 		attacking = false;
 
 
-		if( _animationPlayed >=  AttackAnimations.Length || !_punch.collided ) 
+		if( _animationPlayed >=  AttackAnimations.Length ) 
 			_animationCount = _animationPlayed =  0;
 
 
@@ -214,7 +199,7 @@ public class Mordecai : MonoBehaviour
 	IEnumerator FlyingKick() 
 	{
 		attacking = true;
-		_animations.Play( FlyingKickAnimation );
+		_animations.CrossFade( FlyingKickAnimation );
 		yield return new WaitForSeconds( 0.6f );
 		attacking = false;
 		yield break;
@@ -229,7 +214,7 @@ public class Mordecai : MonoBehaviour
 	IEnumerator GetHit()
 	{
 		hitted = true;
-		_animations.Play( HitAnimation );
+		_animations.CrossFade( HitAnimation );
 		yield return new WaitForSeconds( 0.4f );
 		hitted = false;
 		yield break;
@@ -245,7 +230,7 @@ public class Mordecai : MonoBehaviour
 	IEnumerator Dying()
 	{
 		dying = true;
-		_animations.Play( DieAnimation );
+		_animations.CrossFade( DieAnimation );
 		yield return new WaitForSeconds( 2 );
 		
 		// nao cancela na real, mas para testes, sim
