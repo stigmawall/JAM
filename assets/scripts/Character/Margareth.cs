@@ -33,7 +33,7 @@ public class Margareth : MonoBehaviour
 	}
 	
 
-	float limitZ = -2.984886f;
+	float limit = -2.984886f;
 
 	void Update()
 	{
@@ -42,26 +42,30 @@ public class Margareth : MonoBehaviour
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0;
 
-		if( dir.x < 0 ) transform.LookAt( Vector3.forward );
-		else transform.LookAt( Vector3.back );
+		if (target.position.y >= limit) {
+			if (dir.x < 0)
+				transform.LookAt (Vector3.forward);
+			else
+				transform.LookAt (Vector3.back);
+		}
 
 		//transform.LookAt( targetWithoutY );
-		Debug.Log (target.position.z);
+		Debug.Log (target.position.y);
 
 
 
-		if (dir.magnitude > 5 && (target.position.z >= limitZ))
+		if (dir.magnitude > 5 && (target.position.y >= limit))
 		{
 			Vector3 pos = new Vector3(
 				target.position.x,
 				target.position.y,
-				limitZ
+				limit
 				);
 
 			//target.position
 
 				transform.position = Vector3.MoveTowards(transform.position, pos, 0.06f);
-			walking = true;
+				walking = true;
 			//transform.position = Vector3.forward * 3 * Time.deltaTime;
 		} else {
 			walking = false;

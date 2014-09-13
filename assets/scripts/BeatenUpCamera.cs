@@ -13,8 +13,11 @@ public class BeatenUpCamera : MonoBehaviour {
 
 	public float distance = 0f;
 
+	public GameObject line = null;
+
 	// Use this for initialization
 	void Start () {
+		line.renderer.enabled = false;
 		mainCamera.rect = new Rect (0, 0, 1, 1);
 		mainSlave.rect = new Rect (0, 0, 0, 0);
 
@@ -36,9 +39,11 @@ public class BeatenUpCamera : MonoBehaviour {
 		if (characterHero && characterSlave && mainCamera && mainSlave ) {
 			float dist = Vector3.Distance(characterHero.transform.position, characterSlave.transform.position);
 			if(dist > distance){
+				line.renderer.enabled = true;
 				mainCamera.rect = new Rect (0, 0, 1, 0.5f);
 				mainSlave.rect = new Rect (0, 0.5f, 1, 0.5f);
 			}else{
+				line.renderer.enabled = false;
 				mainCamera.rect = new Rect (0, 0, 1, 1);
 				mainSlave.rect = new Rect (0, 0, 0, 0);
 			}
