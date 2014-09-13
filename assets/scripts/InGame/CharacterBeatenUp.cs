@@ -64,7 +64,7 @@ public class CharacterBeatenUp : MonoBehaviour {
 
 
 			if (Input.GetButton("Jump") ){
-				moveDirection = Vector3.zero;
+				//moveDirection = Vector3.zero;
 				moveDirection.y = jumpSpeed;
 				state = CharacterState.Jumping;
 			}

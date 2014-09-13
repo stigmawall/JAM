@@ -17,6 +17,18 @@ public class BeatenUpCamera : MonoBehaviour {
 	void Start () {
 		mainCamera.rect = new Rect (0, 0, 1, 1);
 		mainSlave.rect = new Rect (0, 0, 0, 0);
+
+		mainSlave.transform.position = new Vector3 (
+			mainCamera.transform.position.x,
+			mainCamera.transform.position.y,
+			mainCamera.transform.position.z);
+		mainSlave.transform.rotation.Set(
+			mainCamera.transform.rotation.x,
+			mainCamera.transform.rotation.y,
+			mainCamera.transform.rotation.z,
+			mainCamera.transform.rotation.w
+		);
+
 	}
 
 	// Update is called once per frame

@@ -34,6 +34,11 @@ public class ControlEnemy : MonoBehaviour {
 		e.target = t;
 	}
 
+	void setControl(int index){
+		Enemy e = enemy[index].GetComponent<Enemy>();
+		e.controlEnemy = GetComponent<ControlEnemy>();
+	}
+
 	void OnTriggerEnter (Collider other) {
 		if (action == ControlEnemy.Action.NoMore) {
 			return;
@@ -49,9 +54,9 @@ public class ControlEnemy : MonoBehaviour {
 		index = 0;
 		enemy = new GameObject [count];
 		for(int i=0;i<count;i++){
-			//todo: ver como desabilitar a IA
 			enemy[i] = (GameObject)Instantiate(Resources.Load("inimigo", typeof(GameObject)));
-			Debug.Log (enemy[i]);
+
+			setControl(index);
 
 			setVisible(index,false);
 			//index
@@ -62,18 +67,28 @@ public class ControlEnemy : MonoBehaviour {
 	}
 
 	void Update(){
+		if (action == ControlEnemy.Action.NoMore) {
+			return;
+		}
 		if (action == ControlEnemy.Action.WaintingHero) {
 			return;
 		}
 
 
+
+
+
 		if (level == 1) {
 			seconds = seconds - Time.deltaTime;
+			Debug.Log(seconds);
 			if( seconds <= 0 ){
 				if( nextEnemy() == false ){
 					//todo: ver como desabilitar ao inves de destruir
-					Destroy(blockedLeft);
-					controlCamera.isFollow = false;
+					//Debug.Log("destroy");
+					//Destroy(blockedLeft);
+					StopWall sw = blockedLeft.transform.GetComponent("StopWall") as StopWall;
+					sw.enabled = false;
+					controlCamera.isFollow = true;
 					action = ControlEnemy.Action.NoMore;
 				}
 				seconds = secondsDefault;
@@ -82,11 +97,14 @@ public class ControlEnemy : MonoBehaviour {
 
 	}
 
+
+
+
+
 	bool nextEnemy(){
 		if (index >= count) {
 			return false;
 		}
-		Debug.Log (index);
 		setVisible(index,true);
 
 		enemy [index].transform.position = new Vector3 (

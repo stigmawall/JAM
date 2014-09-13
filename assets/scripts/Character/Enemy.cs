@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour
 
 	int _animationPlayed;
 
+	bool disable = false;
+
 	public ControlEnemy controlEnemy; 
 
 	void Start() 
@@ -50,18 +52,21 @@ public class Enemy : MonoBehaviour
 		_animations = (Animation)GetComponent(typeof(Animation));
 		_status = GetComponent<Status>();
 		_punch = GetComponentInChildren<EnemyPunchTrigger>();
+
+
+
 	}
-	
-
-
 
 	void Update()
 	{
-
+		if( disable == true ){
+			return;
+		}
 		// control animations
 		if( dying ) {
 			controlEnemy.dieEnemy(index);
 			_animations.CrossFade( DieAnimation );
+			disable = true;
 			return;
 		} 
 		
