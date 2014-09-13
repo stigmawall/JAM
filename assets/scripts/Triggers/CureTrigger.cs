@@ -10,6 +10,7 @@ public class CureTrigger : MonoBehaviour {
 
 	
 
+
 	bool _collided = false;
 
 

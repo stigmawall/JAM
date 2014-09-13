@@ -36,6 +36,8 @@ public class Enemy : MonoBehaviour
 
 	Status _status;
 
+	EnemyPunchTrigger _punch;
+
 	int _animationCount;
 
 	int _animationPlayed;
@@ -47,6 +49,7 @@ public class Enemy : MonoBehaviour
 		walking = attacking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
 		_status = GetComponent<Status>();
+		_punch = GetComponentInChildren<EnemyPunchTrigger>();
 	}
 	
 
@@ -106,8 +109,14 @@ public class Enemy : MonoBehaviour
 
 		_animations.CrossFade( AttackAnimations[ _animationCount ] );
 		_animationCount++;
-		yield return new WaitForSeconds( 0.4f );
-		
+
+		yield return new WaitForSeconds( 0.1f );
+
+		_punch.active = true;
+
+		yield return new WaitForSeconds( 0.3f );
+
+		_punch.active = false;
 		_animationPlayed++;
 		attacking = false;
 		
@@ -137,7 +146,7 @@ public class Enemy : MonoBehaviour
 		}
 		
 		// imprime o valor atual
-		Debug.Log ( "DAMAGE MAGGIE - " + _status.HP );
+		Debug.Log ( "DAMAGE ENEMY - " + _status.HP );
 	}
 
 
@@ -147,7 +156,7 @@ public class Enemy : MonoBehaviour
 	{
 		_status.HP += value;
 		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
-		Debug.Log ( "HEAL MAGGIE - " + _status.HP );
+		Debug.Log ( "HEAL ENEMY - " + _status.HP );
 	}
 
 

@@ -38,6 +38,8 @@ public class Mordecai : MonoBehaviour
 
 	Animation _animations;
 
+	PunchTrigger _punch;
+
 	Status _status;
 
 	int _animationCount;
@@ -53,6 +55,7 @@ public class Mordecai : MonoBehaviour
 		_animations = (Animation)GetComponent(typeof(Animation));
 		_controller = (CharacterController)GetComponent(typeof(CharacterController));
 		_status = GetComponent<Status>();
+		_punch = GetComponentInChildren<PunchTrigger>();
 	}
 	
 
@@ -126,13 +129,19 @@ public class Mordecai : MonoBehaviour
 	{
 		attacking = true;
 
-
 		// primeiro soco
 		_animations.CrossFade( AttackAnimations[ _animationCount ] );
 		_animationCount++;
-		yield return new WaitForSeconds( 0.4f );
 
 
+		// controla tempo de apariçao da bouding box
+		yield return new WaitForSeconds( 0.1f );
+
+		_punch.active = true;
+
+		yield return new WaitForSeconds( 0.3f );
+
+		_punch.active = false;
 		_animationPlayed++;
 		attacking = false;
 
