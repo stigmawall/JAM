@@ -30,11 +30,12 @@ public class Enemy : MonoBehaviour
 
 	public bool dying;
 
+	public Status status;
 	
 
-	Animation _animations;
 
-	Status _status;
+
+	Animation _animations;
 
 	EnemyPunchTrigger _punch;
 
@@ -50,7 +51,7 @@ public class Enemy : MonoBehaviour
 	{
 		walking = attacking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
-		_status = GetComponent<Status>();
+		status = GetComponent<Status>();
 		_punch = GetComponentInChildren<EnemyPunchTrigger>();
 
 
@@ -146,18 +147,17 @@ public class Enemy : MonoBehaviour
 	public void TakeDamage( float damage ) 
 	{
 		// marca o dano
-		_status.HP -= damage;
+		status.HP -= damage;
 		
-		if( _status.HP <= 0 ) 
+		if( status.HP <= 0 ) 
 		{
 			StartCoroutine( Dying() );
 		} else {
-			iTween.ShakePosition( this.gameObject, new Vector3(0.4f,0,0), 0.6f );	
 			StartCoroutine( GetHit() );
 		}
 		
 		// imprime o valor atual
-		Debug.Log ( "DAMAGE ENEMY - " + _status.HP );
+		Debug.Log ( "DAMAGE ENEMY - " + status.HP );
 	}
 
 
@@ -165,9 +165,9 @@ public class Enemy : MonoBehaviour
 	
 	public void Heal( float value ) 
 	{
-		_status.HP += value;
-		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
-		Debug.Log ( "HEAL ENEMY - " + _status.HP );
+		status.HP += value;
+		if( status.HP >= status.MAXHP ) status.HP = status.MAXHP;
+		Debug.Log ( "HEAL ENEMY - " + status.HP );
 	}
 
 

@@ -63,6 +63,7 @@ public class Mordecai : MonoBehaviour
 		_controller = (CharacterController)GetComponent(typeof(CharacterController));
 		_status = GetComponent<Status>();
 		_punch = GetComponentInChildren<PunchTrigger>();
+		_punch.active = false;
 	}
 	
 
@@ -179,20 +180,19 @@ public class Mordecai : MonoBehaviour
 	{
 		attacking = true;
 
-		// primeiro soco
+		WaitForSeconds[] weakPunches = { new WaitForSeconds(0.1f), new WaitForSeconds(0.2f) };
+		WaitForSeconds[] hardPunches = { new WaitForSeconds(0.5f), new WaitForSeconds(0.6f) };
 
-		Debug.Log ( AttackAnimations[ _animationCount ] );
 
 		_animations.Play( AttackAnimations[ _animationCount ] );
 		_animationCount++;
 
-
 		// controla tempo de apariçao da bouding box
-		yield return new WaitForSeconds( 0.1f );
+		yield return ( _animationCount >= AttackAnimations.Length ) ? hardPunches[0] : weakPunches[0];
 
 		_punch.active = true;
 
-		yield return new WaitForSeconds( 0.3f );
+		yield return ( _animationCount >= AttackAnimations.Length ) ? hardPunches[1] : weakPunches[1];
 
 		_punch.active = false;
 		_animationPlayed++;
@@ -215,7 +215,12 @@ public class Mordecai : MonoBehaviour
 	{
 		attacking = true;
 		_animations.Play( FlyingKickAnimation );
-		yield return new WaitForSeconds( 0.6f );
+
+		yield return new WaitForSeconds( 0.1f );
+		_punch.active = true;
+		yield return new WaitForSeconds( 0.4f );
+
+		_punch.active = false;
 		attacking = false;
 		yield break;
 	}
