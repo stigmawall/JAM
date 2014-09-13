@@ -17,8 +17,6 @@ public class CharacterBeatenUp : MonoBehaviour {
 	public enum CharacterState {
 		Idle,
 		Walking,
-		Trotting,
-		Running,
 		Jumping
 	};
 

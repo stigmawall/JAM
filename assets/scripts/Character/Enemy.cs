@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
 	
 	public int distance = 1;
 
-
+	public int index = 0;
 
 	public bool walking;
 
@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
 
 	int _animationPlayed;
 
-
+	public ControlEnemy controlEnemy; 
 
 	void Start() 
 	{
@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour
 
 		// control animations
 		if( dying ) {
+			controlEnemy.dieEnemy(index);
 			_animations.CrossFade( DieAnimation );
 			return;
 		} 

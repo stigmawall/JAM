@@ -54,7 +54,7 @@ public class ControlEnemy : MonoBehaviour {
 			Debug.Log (enemy[i]);
 
 			setVisible(index,false);
-
+			//index
 			setTarget(index,target.transform);
 		}
 		nextEnemy();
@@ -66,7 +66,7 @@ public class ControlEnemy : MonoBehaviour {
 			return;
 		}
 
-		/*
+
 		if (level == 1) {
 			seconds = seconds - Time.deltaTime;
 			if( seconds <= 0 ){
@@ -79,7 +79,7 @@ public class ControlEnemy : MonoBehaviour {
 				seconds = secondsDefault;
 			}
 		}
-		*/
+
 	}
 
 	bool nextEnemy(){
@@ -100,7 +100,7 @@ public class ControlEnemy : MonoBehaviour {
 		return false;
 	}
 
-	void dieEnemy(int index){
+	public void dieEnemy(int index){
 
 		enemy [index] = null;
 
