@@ -705,15 +705,394 @@ ModelImporter:
     400696: rig_mullet|VIS-thigh_pole.ik.R
     400698: rig_mullet|VIS-upper_arm_pole.ik.L
     400700: rig_mullet|VIS-upper_arm_pole.ik.R
+    2300000: Mordecai.001
+    3300000: Mordecai.001
     4300000: Mordecai.001
     7400000: rig_mullet|Attack 1
     7400002: rig_mullet|Attack 1_Recover
     7400004: rig_mullet|Attack 2
     7400006: rig_mullet|Idle_mullet
     7400008: rig_mullet|Run_with mullet
+    7400010: rig_mullet|Attack 1 //// rig_mullet
+    7400012: rig_mullet|Attack 1_Recover //// rig_mullet
+    7400014: rig_mullet|Attack 2 //// rig_mullet
+    7400016: rig_mullet|Idle_mullet //// rig_mullet
+    7400018: rig_mullet|Run_with mullet //// rig_mullet
+    7400020: rig_mullet|Attack 1 //// rig_mullet
+    7400022: rig_mullet|Attack 1_Recover //// rig_mullet
+    7400024: rig_mullet|Attack 2 //// rig_mullet
+    7400026: rig_mullet|Idle_mullet //// rig_mullet
+    7400028: rig_mullet|Run_with mullet //// rig_mullet
+    7400030: rig_mullet|Attack 1 //// rig_mullet
+    7400032: rig_mullet|Attack 1_Recover //// rig_mullet
+    7400034: rig_mullet|Attack 2 //// rig_mullet
+    7400036: rig_mullet|Idle_mullet //// rig_mullet
+    7400038: rig_mullet|Run_with mullet //// rig_mullet
+    7400040: rig_mullet|Attack 1 //// rig_mullet
+    7400042: rig_mullet|Attack 1_Recover //// rig_mullet
+    7400044: rig_mullet|Attack 2 //// rig_mullet
+    7400046: rig_mullet|Idle_mullet //// rig_mullet
+    7400048: rig_mullet|Run_with mullet //// rig_mullet
+    7400050: rig_mullet|Attack 1 //// rig_mullet
+    7400052: rig_mullet|Attack 1_Recover //// rig_mullet
+    7400054: rig_mullet|Attack 2 //// rig_mullet
+    7400056: rig_mullet|Idle_mullet //// rig_mullet
+    7400058: rig_mullet|Run_with mullet //// rig_mullet
+    7400060: rig_mullet|Flyingkick
     9500000: //RootNode
     11100000: //RootNode
+    11100002: Mordecai.001
+    11100004: rig_mullet
+    11100006: rig_mullet|chest
+    11100008: rig_mullet|DEF-chest
+    11100010: rig_mullet|DEF-f_index.01.L.01
+    11100012: rig_mullet|DEF-f_index.01.L.02
+    11100014: rig_mullet|DEF-f_index.01.R.01
+    11100016: rig_mullet|DEF-f_index.01.R.02
+    11100018: rig_mullet|DEF-f_index.02.L
+    11100020: rig_mullet|DEF-f_index.02.R
+    11100022: rig_mullet|DEF-f_index.03.L
+    11100024: rig_mullet|DEF-f_index.03.R
+    11100026: rig_mullet|DEF-f_middle.01.L.01
+    11100028: rig_mullet|DEF-f_middle.01.L.02
+    11100030: rig_mullet|DEF-f_middle.01.R.01
+    11100032: rig_mullet|DEF-f_middle.01.R.02
+    11100034: rig_mullet|DEF-f_middle.02.L
+    11100036: rig_mullet|DEF-f_middle.02.R
+    11100038: rig_mullet|DEF-f_middle.03.L
+    11100040: rig_mullet|DEF-f_middle.03.R
+    11100042: rig_mullet|DEF-f_pinky.01.L.01
+    11100044: rig_mullet|DEF-f_pinky.01.L.02
+    11100046: rig_mullet|DEF-f_pinky.01.R.01
+    11100048: rig_mullet|DEF-f_pinky.01.R.02
+    11100050: rig_mullet|DEF-f_pinky.02.L
+    11100052: rig_mullet|DEF-f_pinky.02.R
+    11100054: rig_mullet|DEF-f_pinky.03.L
+    11100056: rig_mullet|DEF-f_pinky.03.R
+    11100058: rig_mullet|DEF-foot.L
+    11100060: rig_mullet|DEF-foot.R
+    11100062: rig_mullet|DEF-forearm.01.L
+    11100064: rig_mullet|DEF-forearm.01.R
+    11100066: rig_mullet|DEF-forearm.02.L
+    11100068: rig_mullet|DEF-forearm.02.R
+    11100070: rig_mullet|DEF-hand.L
+    11100072: rig_mullet|DEF-hand.R
+    11100074: rig_mullet|DEF-head
+    11100076: rig_mullet|DEF-hips
+    11100078: rig_mullet|DEF-neck
+    11100080: rig_mullet|DEF-palm.01.L
+    11100082: rig_mullet|DEF-palm.01.R
+    11100084: rig_mullet|DEF-palm.02.L
+    11100086: rig_mullet|DEF-palm.02.R
+    11100088: rig_mullet|DEF-palm.04.L
+    11100090: rig_mullet|DEF-palm.04.R
+    11100092: rig_mullet|DEF-shin.01.L
+    11100094: rig_mullet|DEF-shin.01.R
+    11100096: rig_mullet|DEF-shin.02.L
+    11100098: rig_mullet|DEF-shin.02.R
+    11100100: rig_mullet|DEF-shoulder.L
+    11100102: rig_mullet|DEF-shoulder.R
+    11100104: rig_mullet|DEF-spine
+    11100106: rig_mullet|DEF-thigh.01.L
+    11100108: rig_mullet|DEF-thigh.01.R
+    11100110: rig_mullet|DEF-thigh.02.L
+    11100112: rig_mullet|DEF-thigh.02.R
+    11100114: rig_mullet|DEF-toe.L
+    11100116: rig_mullet|DEF-toe.R
+    11100118: rig_mullet|DEF-upper_arm.01.L
+    11100120: rig_mullet|DEF-upper_arm.01.R
+    11100122: rig_mullet|DEF-upper_arm.02.L
+    11100124: rig_mullet|DEF-upper_arm.02.R
+    11100126: rig_mullet|elbow_hose.L
+    11100128: rig_mullet|elbow_hose.R
+    11100130: rig_mullet|elbow_target.ik.L
+    11100132: rig_mullet|elbow_target.ik.R
+    11100134: rig_mullet|f_index.01.L
+    11100136: rig_mullet|f_index.01.R
+    11100138: rig_mullet|f_index.02.L
+    11100140: rig_mullet|f_index.02.R
+    11100142: rig_mullet|f_index.03.L
+    11100144: rig_mullet|f_index.03.R
+    11100146: rig_mullet|f_index.L
+    11100148: rig_mullet|f_index.R
+    11100150: rig_mullet|f_middle.01.L
+    11100152: rig_mullet|f_middle.01.R
+    11100154: rig_mullet|f_middle.02.L
+    11100156: rig_mullet|f_middle.02.R
+    11100158: rig_mullet|f_middle.03.L
+    11100160: rig_mullet|f_middle.03.R
+    11100162: rig_mullet|f_middle.L
+    11100164: rig_mullet|f_middle.R
+    11100166: rig_mullet|f_pinky.01.L
+    11100168: rig_mullet|f_pinky.01.R
+    11100170: rig_mullet|f_pinky.02.L
+    11100172: rig_mullet|f_pinky.02.R
+    11100174: rig_mullet|f_pinky.03.L
+    11100176: rig_mullet|f_pinky.03.R
+    11100178: rig_mullet|f_pinky.L
+    11100180: rig_mullet|f_pinky.R
+    11100182: rig_mullet|foot.fk.L
+    11100184: rig_mullet|foot.fk.R
+    11100186: rig_mullet|foot.ik.L
+    11100188: rig_mullet|foot.ik.R
+    11100190: rig_mullet|foot_roll.ik.L
+    11100192: rig_mullet|foot_roll.ik.R
+    11100194: rig_mullet|forearm.fk.L
+    11100196: rig_mullet|forearm.fk.R
+    11100198: rig_mullet|forearm_hose.L
+    11100200: rig_mullet|forearm_hose.R
+    11100202: rig_mullet|hand.fk.L
+    11100204: rig_mullet|hand.fk.R
+    11100206: rig_mullet|hand.ik.L
+    11100208: rig_mullet|hand.ik.R
+    11100210: rig_mullet|head
+    11100212: rig_mullet|hips
+    11100214: rig_mullet|knee_hose.L
+    11100216: rig_mullet|knee_hose.R
+    11100218: rig_mullet|knee_target.ik.L
+    11100220: rig_mullet|knee_target.ik.R
+    11100222: rig_mullet|MCH-chest.flex
+    11100224: rig_mullet|MCH-chest.flex_s
+    11100226: rig_mullet|MCH-chest.reverse
+    11100228: rig_mullet|MCH-elbow_hose_parent.L
+    11100230: rig_mullet|MCH-elbow_hose_parent.R
+    11100232: rig_mullet|MCH-f_index.01.L
+    11100234: rig_mullet|MCH-f_index.01.L.tip
+    11100236: rig_mullet|MCH-f_index.01.R
+    11100238: rig_mullet|MCH-f_index.01.R.tip
+    11100240: rig_mullet|MCH-f_index.02.L
+    11100242: rig_mullet|MCH-f_index.02.R
+    11100244: rig_mullet|MCH-f_index.03.L
+    11100246: rig_mullet|MCH-f_index.03.R
+    11100248: rig_mullet|MCH-f_middle.01.L
+    11100250: rig_mullet|MCH-f_middle.01.L.tip
+    11100252: rig_mullet|MCH-f_middle.01.R
+    11100254: rig_mullet|MCH-f_middle.01.R.tip
+    11100256: rig_mullet|MCH-f_middle.02.L
+    11100258: rig_mullet|MCH-f_middle.02.R
+    11100260: rig_mullet|MCH-f_middle.03.L
+    11100262: rig_mullet|MCH-f_middle.03.R
+    11100264: rig_mullet|MCH-f_pinky.01.L
+    11100266: rig_mullet|MCH-f_pinky.01.L.tip
+    11100268: rig_mullet|MCH-f_pinky.01.R
+    11100270: rig_mullet|MCH-f_pinky.01.R.tip
+    11100272: rig_mullet|MCH-f_pinky.02.L
+    11100274: rig_mullet|MCH-f_pinky.02.R
+    11100276: rig_mullet|MCH-f_pinky.03.L
+    11100278: rig_mullet|MCH-f_pinky.03.R
+    11100280: rig_mullet|MCH-foot.L
+    11100282: rig_mullet|MCH-foot.L.001
+    11100284: rig_mullet|MCH-foot.L.rocker.01
+    11100286: rig_mullet|MCH-foot.L.rocker.02
+    11100288: rig_mullet|MCH-foot.L.roll.01
+    11100290: rig_mullet|MCH-foot.L.roll.02
+    11100292: rig_mullet|MCH-foot.R
+    11100294: rig_mullet|MCH-foot.R.001
+    11100296: rig_mullet|MCH-foot.R.rocker.01
+    11100298: rig_mullet|MCH-foot.R.rocker.02
+    11100300: rig_mullet|MCH-foot.R.roll.01
+    11100302: rig_mullet|MCH-foot.R.roll.02
+    11100304: rig_mullet|MCH-forearm.01.L
+    11100306: rig_mullet|MCH-forearm.01.R
+    11100308: rig_mullet|MCH-forearm.ik.L
+    11100310: rig_mullet|MCH-forearm.ik.R
+    11100312: rig_mullet|MCH-forearm.junc.L
+    11100314: rig_mullet|MCH-forearm.junc.R
+    11100316: rig_mullet|MCH-forearm.nostr.ik.L
+    11100318: rig_mullet|MCH-forearm.nostr.ik.R
+    11100320: rig_mullet|MCH-forearm.stretch.ik.L
+    11100322: rig_mullet|MCH-forearm.stretch.ik.R
+    11100324: rig_mullet|MCH-forearm_antistr.fk.L
+    11100326: rig_mullet|MCH-forearm_antistr.fk.R
+    11100328: rig_mullet|MCH-forearm_hose_parent.L
+    11100330: rig_mullet|MCH-forearm_hose_parent.R
+    11100332: rig_mullet|MCH-forearm_smth.01.L
+    11100334: rig_mullet|MCH-forearm_smth.01.R
+    11100336: rig_mullet|MCH-hand.L
+    11100338: rig_mullet|MCH-hand.L.001
+    11100340: rig_mullet|MCH-hand.R
+    11100342: rig_mullet|MCH-hand.R.001
+    11100344: rig_mullet|MCH-head
+    11100346: rig_mullet|MCH-head.001
+    11100348: rig_mullet|MCH-head.02
+    11100350: rig_mullet|MCH-head.socket1
+    11100352: rig_mullet|MCH-head.socket2
+    11100354: rig_mullet|MCH-hips.flex
+    11100356: rig_mullet|MCH-hips.flex_s
+    11100358: rig_mullet|MCH-hips.reverse
+    11100360: rig_mullet|MCH-hips_fk_ns_ch
+    11100362: rig_mullet|MCH-hips_fk_ns_ch.001
+    11100364: rig_mullet|MCH-hips_fk_ns_intr
+    11100366: rig_mullet|MCH-hips_fk_ns_intr.001
+    11100368: rig_mullet|MCH-hips_ik_ns_ch
+    11100370: rig_mullet|MCH-hips_ik_ns_ch.001
+    11100372: rig_mullet|MCH-hips_ik_ns_intr
+    11100374: rig_mullet|MCH-hips_ik_ns_intr.001
+    11100376: rig_mullet|MCH-hips_rh_ns_ch
+    11100378: rig_mullet|MCH-hips_rh_ns_ch.001
+    11100380: rig_mullet|MCH-hips_rh_ns_intr
+    11100382: rig_mullet|MCH-hips_rh_ns_intr.001
+    11100384: rig_mullet|MCH-knee_hose_parent.L
+    11100386: rig_mullet|MCH-knee_hose_parent.R
+    11100388: rig_mullet|MCH-neck
+    11100390: rig_mullet|MCH-neck.02
+    11100392: rig_mullet|MCH-neck.child
+    11100394: rig_mullet|MCH-neck.follow
+    11100396: rig_mullet|MCH-par_spine
+    11100398: rig_mullet|MCH-shin.01.L
+    11100400: rig_mullet|MCH-shin.01.R
+    11100402: rig_mullet|MCH-shin.ik.L
+    11100404: rig_mullet|MCH-shin.ik.R
+    11100406: rig_mullet|MCH-shin.junc.L
+    11100408: rig_mullet|MCH-shin.junc.R
+    11100410: rig_mullet|MCH-shin.nostr.ik.L
+    11100412: rig_mullet|MCH-shin.nostr.ik.R
+    11100414: rig_mullet|MCH-shin.stretch.ik.L
+    11100416: rig_mullet|MCH-shin.stretch.ik.R
+    11100418: rig_mullet|MCH-shin_antistr.fk.L
+    11100420: rig_mullet|MCH-shin_antistr.fk.R
+    11100422: rig_mullet|MCH-shin_hose_parent.L
+    11100424: rig_mullet|MCH-shin_hose_parent.R
+    11100426: rig_mullet|MCH-shin_smth.01.L
+    11100428: rig_mullet|MCH-shin_smth.01.R
+    11100430: rig_mullet|MCH-shoulder_fk_ns_ch.L
+    11100432: rig_mullet|MCH-shoulder_fk_ns_ch.R
+    11100434: rig_mullet|MCH-shoulder_fk_ns_intr.L
+    11100436: rig_mullet|MCH-shoulder_fk_ns_intr.R
+    11100438: rig_mullet|MCH-shoulder_ik_ns_ch.L
+    11100440: rig_mullet|MCH-shoulder_ik_ns_ch.R
+    11100442: rig_mullet|MCH-shoulder_ik_ns_intr.L
+    11100444: rig_mullet|MCH-shoulder_ik_ns_intr.R
+    11100446: rig_mullet|MCH-shoulder_rh_ns_ch.L
+    11100448: rig_mullet|MCH-shoulder_rh_ns_ch.R
+    11100450: rig_mullet|MCH-shoulder_rh_ns_intr.L
+    11100452: rig_mullet|MCH-shoulder_rh_ns_intr.R
+    11100454: rig_mullet|MCH-spine.flex
+    11100456: rig_mullet|MCH-spine.flex_s
+    11100458: rig_mullet|MCH-spine.reverse
+    11100460: rig_mullet|MCH-sub_chest
+    11100462: rig_mullet|MCH-sub_hips
+    11100464: rig_mullet|MCH-sub_spine
+    11100466: rig_mullet|MCH-thigh.fk.L.socket1
+    11100468: rig_mullet|MCH-thigh.fk.L.socket2
+    11100470: rig_mullet|MCH-thigh.fk.R.socket1
+    11100472: rig_mullet|MCH-thigh.fk.R.socket2
+    11100474: rig_mullet|MCH-thigh.ik.L
+    11100476: rig_mullet|MCH-thigh.ik.R
+    11100478: rig_mullet|MCH-thigh.nostr.ik.L
+    11100480: rig_mullet|MCH-thigh.nostr.ik.R
+    11100482: rig_mullet|MCH-thigh.stretch.ik.L
+    11100484: rig_mullet|MCH-thigh.stretch.ik.R
+    11100486: rig_mullet|MCH-thigh_antistr.fk.L
+    11100488: rig_mullet|MCH-thigh_antistr.fk.R
+    11100490: rig_mullet|MCH-thigh_hose_parent.L
+    11100492: rig_mullet|MCH-thigh_hose_parent.R
+    11100494: rig_mullet|MCH-thigh_smth.02.L
+    11100496: rig_mullet|MCH-thigh_smth.02.R
+    11100498: rig_mullet|MCH-toe.L.parent
+    11100500: rig_mullet|MCH-toe.L.socket1
+    11100502: rig_mullet|MCH-toe.L.socket2
+    11100504: rig_mullet|MCH-toe.R.parent
+    11100506: rig_mullet|MCH-toe.R.socket1
+    11100508: rig_mullet|MCH-toe.R.socket2
+    11100510: rig_mullet|MCH-upper_arm.fk.L.socket1
+    11100512: rig_mullet|MCH-upper_arm.fk.L.socket2
+    11100514: rig_mullet|MCH-upper_arm.fk.R.socket1
+    11100516: rig_mullet|MCH-upper_arm.fk.R.socket2
+    11100518: rig_mullet|MCH-upper_arm.ik.L
+    11100520: rig_mullet|MCH-upper_arm.ik.R
+    11100522: rig_mullet|MCH-upper_arm.nostr.ik.L
+    11100524: rig_mullet|MCH-upper_arm.nostr.ik.R
+    11100526: rig_mullet|MCH-upper_arm.stretch.ik.L
+    11100528: rig_mullet|MCH-upper_arm.stretch.ik.R
+    11100530: rig_mullet|MCH-upper_arm_antistr.fk.L
+    11100532: rig_mullet|MCH-upper_arm_antistr.fk.R
+    11100534: rig_mullet|MCH-upper_arm_hose_parent.L
+    11100536: rig_mullet|MCH-upper_arm_hose_parent.R
+    11100538: rig_mullet|MCH-upper_arm_smth.02.L
+    11100540: rig_mullet|MCH-upper_arm_smth.02.R
+    11100542: rig_mullet|mullet
+    11100544: rig_mullet|neck
+    11100546: rig_mullet|ORG-chest
+    11100548: rig_mullet|ORG-f_index.01.L
+    11100550: rig_mullet|ORG-f_index.01.R
+    11100552: rig_mullet|ORG-f_index.02.L
+    11100554: rig_mullet|ORG-f_index.02.R
+    11100556: rig_mullet|ORG-f_index.03.L
+    11100558: rig_mullet|ORG-f_index.03.R
+    11100560: rig_mullet|ORG-f_middle.01.L
+    11100562: rig_mullet|ORG-f_middle.01.R
+    11100564: rig_mullet|ORG-f_middle.02.L
+    11100566: rig_mullet|ORG-f_middle.02.R
+    11100568: rig_mullet|ORG-f_middle.03.L
+    11100570: rig_mullet|ORG-f_middle.03.R
+    11100572: rig_mullet|ORG-f_pinky.01.L
+    11100574: rig_mullet|ORG-f_pinky.01.R
+    11100576: rig_mullet|ORG-f_pinky.02.L
+    11100578: rig_mullet|ORG-f_pinky.02.R
+    11100580: rig_mullet|ORG-f_pinky.03.L
+    11100582: rig_mullet|ORG-f_pinky.03.R
+    11100584: rig_mullet|ORG-foot.L
+    11100586: rig_mullet|ORG-foot.R
+    11100588: rig_mullet|ORG-forearm.L
+    11100590: rig_mullet|ORG-forearm.R
+    11100592: rig_mullet|ORG-hand.L
+    11100594: rig_mullet|ORG-hand.R
+    11100596: rig_mullet|ORG-head
+    11100598: rig_mullet|ORG-heel.02.L
+    11100600: rig_mullet|ORG-heel.02.R
+    11100602: rig_mullet|ORG-heel.L
+    11100604: rig_mullet|ORG-heel.R
+    11100606: rig_mullet|ORG-hips
+    11100608: rig_mullet|ORG-neck
+    11100610: rig_mullet|ORG-palm.01.L
+    11100612: rig_mullet|ORG-palm.01.R
+    11100614: rig_mullet|ORG-palm.02.L
+    11100616: rig_mullet|ORG-palm.02.R
+    11100618: rig_mullet|ORG-palm.04.L
+    11100620: rig_mullet|ORG-palm.04.R
+    11100622: rig_mullet|ORG-shin.L
+    11100624: rig_mullet|ORG-shin.R
+    11100626: rig_mullet|ORG-shoulder.L
+    11100628: rig_mullet|ORG-shoulder.R
+    11100630: rig_mullet|ORG-spine
+    11100632: rig_mullet|ORG-thigh.L
+    11100634: rig_mullet|ORG-thigh.R
+    11100636: rig_mullet|ORG-toe.L
+    11100638: rig_mullet|ORG-toe.R
+    11100640: rig_mullet|ORG-upper_arm.L
+    11100642: rig_mullet|ORG-upper_arm.R
+    11100644: rig_mullet|palm.L
+    11100646: rig_mullet|palm.R
+    11100648: rig_mullet|root
+    11100650: rig_mullet|shin.fk.L
+    11100652: rig_mullet|shin.fk.R
+    11100654: rig_mullet|shin_hose.L
+    11100656: rig_mullet|shin_hose.R
+    11100658: rig_mullet|shoulder.L
+    11100660: rig_mullet|shoulder.R
+    11100662: rig_mullet|spine
+    11100664: rig_mullet|thigh.fk.L
+    11100666: rig_mullet|thigh.fk.R
+    11100668: rig_mullet|thigh_hose.L
+    11100670: rig_mullet|thigh_hose.R
+    11100672: rig_mullet|toe.L
+    11100674: rig_mullet|toe.R
+    11100676: rig_mullet|torso
+    11100678: rig_mullet|upper_arm.fk.L
+    11100680: rig_mullet|upper_arm.fk.R
+    11100682: rig_mullet|upper_arm_hose.L
+    11100684: rig_mullet|upper_arm_hose.R
+    11100686: rig_mullet|VIS-foot.ik.L
+    11100688: rig_mullet|VIS-foot.ik.R
+    11100690: rig_mullet|VIS-hand.ik.L
+    11100692: rig_mullet|VIS-hand.ik.R
+    11100694: rig_mullet|VIS-thigh_pole.ik.L
+    11100696: rig_mullet|VIS-thigh_pole.ik.R
+    11100698: rig_mullet|VIS-upper_arm_pole.ik.L
+    11100700: rig_mullet|VIS-upper_arm_pole.ik.R
     13700000: Mordecai.001
+    13700002: rig_mullet|root
   materials:
     importMaterials: 1
     materialName: 0
@@ -1462,7 +1841,7 @@ ModelImporter:
       name: rig_mullet|Attack 1_Recover
       takeName: rig_mullet|Attack 1_Recover
       firstFrame: 0
-      lastFrame: 13
+      lastFrame: .100000001
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -3646,7 +4025,735 @@ ModelImporter:
       name: rig_mullet|Run_with mullet
       takeName: rig_mullet|Run_with mullet
       firstFrame: 0
-      lastFrame: 16
+      lastFrame: 15
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Mordecai.001
+        weight: 1
+      - path: rig_mullet
+        weight: 1
+      - path: rig_mullet/rig_mullet|root
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|DEF-hips
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|foot_roll.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01/rig_mullet|MCH-foot.L.rocker.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01/rig_mullet|MCH-foot.L.rocker.02/rig_mullet|MCH-foot.L.roll.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01/rig_mullet|MCH-foot.L.rocker.02/rig_mullet|MCH-foot.L.roll.01/rig_mullet|MCH-foot.L.roll.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01/rig_mullet|MCH-foot.L.rocker.02/rig_mullet|MCH-foot.L.roll.01/rig_mullet|MCH-foot.L.roll.02/rig_mullet|MCH-foot.L.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01/rig_mullet|MCH-foot.L.rocker.02/rig_mullet|MCH-foot.L.roll.01/rig_mullet|MCH-toe.L.socket1
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01/rig_mullet|MCH-foot.L.rocker.02/rig_mullet|MCH-foot.L.roll.01/rig_mullet|MCH-toe.L.socket1/rig_mullet|MCH-toe.L.parent
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.L/rig_mullet|MCH-foot.L.rocker.01/rig_mullet|MCH-foot.L.rocker.02/rig_mullet|MCH-foot.L.roll.01/rig_mullet|MCH-toe.L.socket1/rig_mullet|MCH-toe.L.parent/rig_mullet|toe.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|foot_roll.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01/rig_mullet|MCH-foot.R.rocker.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01/rig_mullet|MCH-foot.R.rocker.02/rig_mullet|MCH-foot.R.roll.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01/rig_mullet|MCH-foot.R.rocker.02/rig_mullet|MCH-foot.R.roll.01/rig_mullet|MCH-foot.R.roll.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01/rig_mullet|MCH-foot.R.rocker.02/rig_mullet|MCH-foot.R.roll.01/rig_mullet|MCH-foot.R.roll.02/rig_mullet|MCH-foot.R.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01/rig_mullet|MCH-foot.R.rocker.02/rig_mullet|MCH-foot.R.roll.01/rig_mullet|MCH-toe.R.socket1
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01/rig_mullet|MCH-foot.R.rocker.02/rig_mullet|MCH-foot.R.roll.01/rig_mullet|MCH-toe.R.socket1/rig_mullet|MCH-toe.R.parent
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|foot.ik.R/rig_mullet|MCH-foot.R.rocker.01/rig_mullet|MCH-foot.R.rocker.02/rig_mullet|MCH-foot.R.roll.01/rig_mullet|MCH-toe.R.socket1/rig_mullet|MCH-toe.R.parent/rig_mullet|toe.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|hand.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|hand.ik.L/rig_mullet|MCH-hand.L.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|hand.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|hand.ik.R/rig_mullet|MCH-hand.R.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-head.socket2
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-head.socket2/rig_mullet|head
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-head.socket2/rig_mullet|head/rig_mullet|MCH-head
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-head.socket2/rig_mullet|head/rig_mullet|mullet
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_fk_ns_ch
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_fk_ns_ch/rig_mullet|MCH-thigh.fk.L.socket1
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_fk_ns_ch.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_fk_ns_ch.001/rig_mullet|MCH-thigh.fk.R.socket1
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch/rig_mullet|knee_target.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch/rig_mullet|MCH-shin.stretch.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch/rig_mullet|MCH-thigh.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch/rig_mullet|MCH-thigh.ik.L/rig_mullet|MCH-shin.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch/rig_mullet|MCH-thigh.nostr.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch/rig_mullet|MCH-thigh.nostr.ik.L/rig_mullet|MCH-shin.nostr.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch/rig_mullet|MCH-thigh.stretch.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001/rig_mullet|knee_target.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001/rig_mullet|MCH-shin.stretch.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001/rig_mullet|MCH-thigh.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001/rig_mullet|MCH-thigh.ik.R/rig_mullet|MCH-shin.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001/rig_mullet|MCH-thigh.nostr.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001/rig_mullet|MCH-thigh.nostr.ik.R/rig_mullet|MCH-shin.nostr.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_ik_ns_ch.001/rig_mullet|MCH-thigh.stretch.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch/rig_mullet|DEF-thigh.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch/rig_mullet|MCH-knee_hose_parent.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch/rig_mullet|MCH-knee_hose_parent.L/rig_mullet|knee_hose.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch/rig_mullet|MCH-shin_hose_parent.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch/rig_mullet|MCH-shin_hose_parent.L/rig_mullet|shin_hose.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch/rig_mullet|MCH-thigh_hose_parent.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch/rig_mullet|MCH-thigh_hose_parent.L/rig_mullet|thigh_hose.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001/rig_mullet|DEF-thigh.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001/rig_mullet|MCH-knee_hose_parent.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001/rig_mullet|MCH-knee_hose_parent.R/rig_mullet|knee_hose.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001/rig_mullet|MCH-shin_hose_parent.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001/rig_mullet|MCH-shin_hose_parent.R/rig_mullet|shin_hose.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001/rig_mullet|MCH-thigh_hose_parent.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-hips_rh_ns_ch.001/rig_mullet|MCH-thigh_hose_parent.R/rig_mullet|thigh_hose.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_fk_ns_ch.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_fk_ns_ch.L/rig_mullet|MCH-upper_arm.fk.L.socket1
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_fk_ns_ch.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_fk_ns_ch.R/rig_mullet|MCH-upper_arm.fk.R.socket1
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L/rig_mullet|elbow_target.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L/rig_mullet|MCH-forearm.stretch.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L/rig_mullet|MCH-upper_arm.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L/rig_mullet|MCH-upper_arm.ik.L/rig_mullet|MCH-forearm.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L/rig_mullet|MCH-upper_arm.nostr.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L/rig_mullet|MCH-upper_arm.nostr.ik.L/rig_mullet|MCH-forearm.nostr.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.L/rig_mullet|MCH-upper_arm.stretch.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R/rig_mullet|elbow_target.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R/rig_mullet|MCH-forearm.stretch.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R/rig_mullet|MCH-upper_arm.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R/rig_mullet|MCH-upper_arm.ik.R/rig_mullet|MCH-forearm.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R/rig_mullet|MCH-upper_arm.nostr.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R/rig_mullet|MCH-upper_arm.nostr.ik.R/rig_mullet|MCH-forearm.nostr.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_ik_ns_ch.R/rig_mullet|MCH-upper_arm.stretch.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L/rig_mullet|DEF-upper_arm.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L/rig_mullet|MCH-elbow_hose_parent.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L/rig_mullet|MCH-elbow_hose_parent.L/rig_mullet|elbow_hose.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L/rig_mullet|MCH-forearm_hose_parent.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L/rig_mullet|MCH-forearm_hose_parent.L/rig_mullet|forearm_hose.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L/rig_mullet|MCH-upper_arm_hose_parent.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.L/rig_mullet|MCH-upper_arm_hose_parent.L/rig_mullet|upper_arm_hose.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R/rig_mullet|DEF-upper_arm.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R/rig_mullet|MCH-elbow_hose_parent.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R/rig_mullet|MCH-elbow_hose_parent.R/rig_mullet|elbow_hose.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R/rig_mullet|MCH-forearm_hose_parent.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R/rig_mullet|MCH-forearm_hose_parent.R/rig_mullet|forearm_hose.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R/rig_mullet|MCH-upper_arm_hose_parent.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-shoulder_rh_ns_ch.R/rig_mullet|MCH-upper_arm_hose_parent.R/rig_mullet|upper_arm_hose.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.L.socket2
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.L.socket2/rig_mullet|thigh.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.L.socket2/rig_mullet|thigh.fk.L/rig_mullet|MCH-thigh_antistr.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.L.socket2/rig_mullet|thigh.fk.L/rig_mullet|MCH-thigh_antistr.fk.L/rig_mullet|shin.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.L.socket2/rig_mullet|thigh.fk.L/rig_mullet|MCH-thigh_antistr.fk.L/rig_mullet|shin.fk.L/rig_mullet|MCH-shin_antistr.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.L.socket2/rig_mullet|thigh.fk.L/rig_mullet|MCH-thigh_antistr.fk.L/rig_mullet|shin.fk.L/rig_mullet|MCH-shin_antistr.fk.L/rig_mullet|foot.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.L.socket2/rig_mullet|thigh.fk.L/rig_mullet|MCH-thigh_antistr.fk.L/rig_mullet|shin.fk.L/rig_mullet|MCH-shin_antistr.fk.L/rig_mullet|foot.fk.L/rig_mullet|MCH-foot.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.R.socket2
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.R.socket2/rig_mullet|thigh.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.R.socket2/rig_mullet|thigh.fk.R/rig_mullet|MCH-thigh_antistr.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.R.socket2/rig_mullet|thigh.fk.R/rig_mullet|MCH-thigh_antistr.fk.R/rig_mullet|shin.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.R.socket2/rig_mullet|thigh.fk.R/rig_mullet|MCH-thigh_antistr.fk.R/rig_mullet|shin.fk.R/rig_mullet|MCH-shin_antistr.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.R.socket2/rig_mullet|thigh.fk.R/rig_mullet|MCH-thigh_antistr.fk.R/rig_mullet|shin.fk.R/rig_mullet|MCH-shin_antistr.fk.R/rig_mullet|foot.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-thigh.fk.R.socket2/rig_mullet|thigh.fk.R/rig_mullet|MCH-thigh_antistr.fk.R/rig_mullet|shin.fk.R/rig_mullet|MCH-shin_antistr.fk.R/rig_mullet|foot.fk.R/rig_mullet|MCH-foot.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.L.socket2
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.L.socket2/rig_mullet|upper_arm.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.L.socket2/rig_mullet|upper_arm.fk.L/rig_mullet|MCH-upper_arm_antistr.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.L.socket2/rig_mullet|upper_arm.fk.L/rig_mullet|MCH-upper_arm_antistr.fk.L/rig_mullet|forearm.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.L.socket2/rig_mullet|upper_arm.fk.L/rig_mullet|MCH-upper_arm_antistr.fk.L/rig_mullet|forearm.fk.L/rig_mullet|MCH-forearm_antistr.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.L.socket2/rig_mullet|upper_arm.fk.L/rig_mullet|MCH-upper_arm_antistr.fk.L/rig_mullet|forearm.fk.L/rig_mullet|MCH-forearm_antistr.fk.L/rig_mullet|hand.fk.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.L.socket2/rig_mullet|upper_arm.fk.L/rig_mullet|MCH-upper_arm_antistr.fk.L/rig_mullet|forearm.fk.L/rig_mullet|MCH-forearm_antistr.fk.L/rig_mullet|hand.fk.L/rig_mullet|MCH-hand.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.R.socket2
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.R.socket2/rig_mullet|upper_arm.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.R.socket2/rig_mullet|upper_arm.fk.R/rig_mullet|MCH-upper_arm_antistr.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.R.socket2/rig_mullet|upper_arm.fk.R/rig_mullet|MCH-upper_arm_antistr.fk.R/rig_mullet|forearm.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.R.socket2/rig_mullet|upper_arm.fk.R/rig_mullet|MCH-upper_arm_antistr.fk.R/rig_mullet|forearm.fk.R/rig_mullet|MCH-forearm_antistr.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.R.socket2/rig_mullet|upper_arm.fk.R/rig_mullet|MCH-upper_arm_antistr.fk.R/rig_mullet|forearm.fk.R/rig_mullet|MCH-forearm_antistr.fk.R/rig_mullet|hand.fk.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|MCH-upper_arm.fk.R.socket2/rig_mullet|upper_arm.fk.R/rig_mullet|MCH-upper_arm_antistr.fk.R/rig_mullet|forearm.fk.R/rig_mullet|MCH-forearm_antistr.fk.R/rig_mullet|hand.fk.R/rig_mullet|MCH-hand.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|DEF-spine
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|MCH-hips_fk_ns_intr
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|MCH-hips_fk_ns_intr.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|MCH-hips_ik_ns_intr
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|MCH-hips_ik_ns_intr.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|MCH-hips_rh_ns_intr
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|MCH-hips_rh_ns_intr.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|DEF-chest
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|DEF-neck
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-head.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-head.02/rig_mullet|MCH-head.001
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-head.socket1
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-neck.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-neck.02/rig_mullet|MCH-neck
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-neck.follow
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-neck.follow/rig_mullet|neck
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|MCH-neck.follow/rig_mullet|neck/rig_mullet|MCH-neck.child
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-neck
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-neck/rig_mullet|DEF-head
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-neck/rig_mullet|ORG-head
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|DEF-shoulder.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|MCH-shoulder_fk_ns_intr.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|MCH-shoulder_ik_ns_intr.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|MCH-shoulder_rh_ns_intr.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|DEF-upper_arm.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|DEF-upper_arm.02.L/rig_mullet|MCH-upper_arm_smth.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|MCH-forearm.junc.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|DEF-forearm.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|MCH-forearm.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|MCH-forearm.01.L/rig_mullet|MCH-forearm_smth.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|MCH-forearm.01.L/rig_mullet|MCH-forearm_smth.01.L/rig_mullet|DEF-forearm.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|DEF-hand.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|DEF-f_index.01.L.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|DEF-palm.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|f_index.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|MCH-f_index.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|MCH-f_index.01.L/rig_mullet|f_index.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|MCH-f_index.01.L/rig_mullet|f_index.01.L/rig_mullet|MCH-f_index.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|MCH-f_index.01.L/rig_mullet|f_index.01.L/rig_mullet|MCH-f_index.02.L/rig_mullet|f_index.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|MCH-f_index.01.L/rig_mullet|f_index.01.L/rig_mullet|MCH-f_index.02.L/rig_mullet|f_index.02.L/rig_mullet|MCH-f_index.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|MCH-f_index.01.L/rig_mullet|f_index.01.L/rig_mullet|MCH-f_index.02.L/rig_mullet|f_index.02.L/rig_mullet|MCH-f_index.03.L/rig_mullet|f_index.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|ORG-f_index.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|ORG-f_index.01.L/rig_mullet|DEF-f_index.01.L.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|ORG-f_index.01.L/rig_mullet|MCH-f_index.01.L.tip
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|ORG-f_index.01.L/rig_mullet|ORG-f_index.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|ORG-f_index.01.L/rig_mullet|ORG-f_index.02.L/rig_mullet|DEF-f_index.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|ORG-f_index.01.L/rig_mullet|ORG-f_index.02.L/rig_mullet|ORG-f_index.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.01.L/rig_mullet|ORG-f_index.01.L/rig_mullet|ORG-f_index.02.L/rig_mullet|ORG-f_index.03.L/rig_mullet|DEF-f_index.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|DEF-f_middle.01.L.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|DEF-palm.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|f_middle.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|MCH-f_middle.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|MCH-f_middle.01.L/rig_mullet|f_middle.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|MCH-f_middle.01.L/rig_mullet|f_middle.01.L/rig_mullet|MCH-f_middle.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|MCH-f_middle.01.L/rig_mullet|f_middle.01.L/rig_mullet|MCH-f_middle.02.L/rig_mullet|f_middle.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|MCH-f_middle.01.L/rig_mullet|f_middle.01.L/rig_mullet|MCH-f_middle.02.L/rig_mullet|f_middle.02.L/rig_mullet|MCH-f_middle.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|MCH-f_middle.01.L/rig_mullet|f_middle.01.L/rig_mullet|MCH-f_middle.02.L/rig_mullet|f_middle.02.L/rig_mullet|MCH-f_middle.03.L/rig_mullet|f_middle.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|ORG-f_middle.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|ORG-f_middle.01.L/rig_mullet|DEF-f_middle.01.L.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|ORG-f_middle.01.L/rig_mullet|MCH-f_middle.01.L.tip
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|ORG-f_middle.01.L/rig_mullet|ORG-f_middle.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|ORG-f_middle.01.L/rig_mullet|ORG-f_middle.02.L/rig_mullet|DEF-f_middle.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|ORG-f_middle.01.L/rig_mullet|ORG-f_middle.02.L/rig_mullet|ORG-f_middle.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.02.L/rig_mullet|ORG-f_middle.01.L/rig_mullet|ORG-f_middle.02.L/rig_mullet|ORG-f_middle.03.L/rig_mullet|DEF-f_middle.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|DEF-f_pinky.01.L.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|DEF-palm.04.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|f_pinky.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|MCH-f_pinky.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|MCH-f_pinky.01.L/rig_mullet|f_pinky.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|MCH-f_pinky.01.L/rig_mullet|f_pinky.01.L/rig_mullet|MCH-f_pinky.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|MCH-f_pinky.01.L/rig_mullet|f_pinky.01.L/rig_mullet|MCH-f_pinky.02.L/rig_mullet|f_pinky.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|MCH-f_pinky.01.L/rig_mullet|f_pinky.01.L/rig_mullet|MCH-f_pinky.02.L/rig_mullet|f_pinky.02.L/rig_mullet|MCH-f_pinky.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|MCH-f_pinky.01.L/rig_mullet|f_pinky.01.L/rig_mullet|MCH-f_pinky.02.L/rig_mullet|f_pinky.02.L/rig_mullet|MCH-f_pinky.03.L/rig_mullet|f_pinky.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|ORG-f_pinky.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|ORG-f_pinky.01.L/rig_mullet|DEF-f_pinky.01.L.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|ORG-f_pinky.01.L/rig_mullet|MCH-f_pinky.01.L.tip
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|ORG-f_pinky.01.L/rig_mullet|ORG-f_pinky.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|ORG-f_pinky.01.L/rig_mullet|ORG-f_pinky.02.L/rig_mullet|DEF-f_pinky.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|ORG-f_pinky.01.L/rig_mullet|ORG-f_pinky.02.L/rig_mullet|ORG-f_pinky.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|ORG-palm.04.L/rig_mullet|ORG-f_pinky.01.L/rig_mullet|ORG-f_pinky.02.L/rig_mullet|ORG-f_pinky.03.L/rig_mullet|DEF-f_pinky.03.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.L/rig_mullet|ORG-upper_arm.L/rig_mullet|ORG-forearm.L/rig_mullet|ORG-hand.L/rig_mullet|palm.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|DEF-shoulder.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|MCH-shoulder_fk_ns_intr.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|MCH-shoulder_ik_ns_intr.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|MCH-shoulder_rh_ns_intr.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|DEF-upper_arm.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|DEF-upper_arm.02.R/rig_mullet|MCH-upper_arm_smth.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|MCH-forearm.junc.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|DEF-forearm.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|MCH-forearm.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|MCH-forearm.01.R/rig_mullet|MCH-forearm_smth.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|MCH-forearm.01.R/rig_mullet|MCH-forearm_smth.01.R/rig_mullet|DEF-forearm.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|DEF-hand.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|DEF-f_index.01.R.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|DEF-palm.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|f_index.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|MCH-f_index.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|MCH-f_index.01.R/rig_mullet|f_index.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|MCH-f_index.01.R/rig_mullet|f_index.01.R/rig_mullet|MCH-f_index.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|MCH-f_index.01.R/rig_mullet|f_index.01.R/rig_mullet|MCH-f_index.02.R/rig_mullet|f_index.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|MCH-f_index.01.R/rig_mullet|f_index.01.R/rig_mullet|MCH-f_index.02.R/rig_mullet|f_index.02.R/rig_mullet|MCH-f_index.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|MCH-f_index.01.R/rig_mullet|f_index.01.R/rig_mullet|MCH-f_index.02.R/rig_mullet|f_index.02.R/rig_mullet|MCH-f_index.03.R/rig_mullet|f_index.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|ORG-f_index.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|ORG-f_index.01.R/rig_mullet|DEF-f_index.01.R.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|ORG-f_index.01.R/rig_mullet|MCH-f_index.01.R.tip
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|ORG-f_index.01.R/rig_mullet|ORG-f_index.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|ORG-f_index.01.R/rig_mullet|ORG-f_index.02.R/rig_mullet|DEF-f_index.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|ORG-f_index.01.R/rig_mullet|ORG-f_index.02.R/rig_mullet|ORG-f_index.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.01.R/rig_mullet|ORG-f_index.01.R/rig_mullet|ORG-f_index.02.R/rig_mullet|ORG-f_index.03.R/rig_mullet|DEF-f_index.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|DEF-f_middle.01.R.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|DEF-palm.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|f_middle.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|MCH-f_middle.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|MCH-f_middle.01.R/rig_mullet|f_middle.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|MCH-f_middle.01.R/rig_mullet|f_middle.01.R/rig_mullet|MCH-f_middle.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|MCH-f_middle.01.R/rig_mullet|f_middle.01.R/rig_mullet|MCH-f_middle.02.R/rig_mullet|f_middle.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|MCH-f_middle.01.R/rig_mullet|f_middle.01.R/rig_mullet|MCH-f_middle.02.R/rig_mullet|f_middle.02.R/rig_mullet|MCH-f_middle.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|MCH-f_middle.01.R/rig_mullet|f_middle.01.R/rig_mullet|MCH-f_middle.02.R/rig_mullet|f_middle.02.R/rig_mullet|MCH-f_middle.03.R/rig_mullet|f_middle.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|ORG-f_middle.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|ORG-f_middle.01.R/rig_mullet|DEF-f_middle.01.R.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|ORG-f_middle.01.R/rig_mullet|MCH-f_middle.01.R.tip
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|ORG-f_middle.01.R/rig_mullet|ORG-f_middle.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|ORG-f_middle.01.R/rig_mullet|ORG-f_middle.02.R/rig_mullet|DEF-f_middle.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|ORG-f_middle.01.R/rig_mullet|ORG-f_middle.02.R/rig_mullet|ORG-f_middle.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.02.R/rig_mullet|ORG-f_middle.01.R/rig_mullet|ORG-f_middle.02.R/rig_mullet|ORG-f_middle.03.R/rig_mullet|DEF-f_middle.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|DEF-f_pinky.01.R.01
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|DEF-palm.04.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|f_pinky.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|MCH-f_pinky.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|MCH-f_pinky.01.R/rig_mullet|f_pinky.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|MCH-f_pinky.01.R/rig_mullet|f_pinky.01.R/rig_mullet|MCH-f_pinky.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|MCH-f_pinky.01.R/rig_mullet|f_pinky.01.R/rig_mullet|MCH-f_pinky.02.R/rig_mullet|f_pinky.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|MCH-f_pinky.01.R/rig_mullet|f_pinky.01.R/rig_mullet|MCH-f_pinky.02.R/rig_mullet|f_pinky.02.R/rig_mullet|MCH-f_pinky.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|MCH-f_pinky.01.R/rig_mullet|f_pinky.01.R/rig_mullet|MCH-f_pinky.02.R/rig_mullet|f_pinky.02.R/rig_mullet|MCH-f_pinky.03.R/rig_mullet|f_pinky.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|ORG-f_pinky.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|ORG-f_pinky.01.R/rig_mullet|DEF-f_pinky.01.R.02
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|ORG-f_pinky.01.R/rig_mullet|MCH-f_pinky.01.R.tip
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|ORG-f_pinky.01.R/rig_mullet|ORG-f_pinky.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|ORG-f_pinky.01.R/rig_mullet|ORG-f_pinky.02.R/rig_mullet|DEF-f_pinky.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|ORG-f_pinky.01.R/rig_mullet|ORG-f_pinky.02.R/rig_mullet|ORG-f_pinky.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|ORG-palm.04.R/rig_mullet|ORG-f_pinky.01.R/rig_mullet|ORG-f_pinky.02.R/rig_mullet|ORG-f_pinky.03.R/rig_mullet|DEF-f_pinky.03.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|ORG-shoulder.R/rig_mullet|ORG-upper_arm.R/rig_mullet|ORG-forearm.R/rig_mullet|ORG-hand.R/rig_mullet|palm.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|shoulder.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-spine/rig_mullet|ORG-chest/rig_mullet|shoulder.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|DEF-thigh.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|DEF-thigh.02.L/rig_mullet|MCH-thigh_smth.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|MCH-shin.junc.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|DEF-shin.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|MCH-shin.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|MCH-shin.01.L/rig_mullet|MCH-shin_smth.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|MCH-shin.01.L/rig_mullet|MCH-shin_smth.01.L/rig_mullet|DEF-shin.01.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|ORG-foot.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|ORG-foot.L/rig_mullet|DEF-foot.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|ORG-foot.L/rig_mullet|MCH-toe.L.socket2
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|ORG-foot.L/rig_mullet|ORG-toe.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|ORG-foot.L/rig_mullet|ORG-toe.L/rig_mullet|DEF-toe.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|ORG-heel.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.L/rig_mullet|ORG-shin.L/rig_mullet|ORG-heel.L/rig_mullet|ORG-heel.02.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|DEF-thigh.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|DEF-thigh.02.R/rig_mullet|MCH-thigh_smth.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|MCH-shin.junc.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|DEF-shin.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|MCH-shin.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|MCH-shin.01.R/rig_mullet|MCH-shin_smth.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|MCH-shin.01.R/rig_mullet|MCH-shin_smth.01.R/rig_mullet|DEF-shin.01.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|ORG-foot.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|ORG-foot.R/rig_mullet|DEF-foot.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|ORG-foot.R/rig_mullet|MCH-toe.R.socket2
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|ORG-foot.R/rig_mullet|ORG-toe.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|ORG-foot.R/rig_mullet|ORG-toe.R/rig_mullet|DEF-toe.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|ORG-heel.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|ORG-hips/rig_mullet|ORG-thigh.R/rig_mullet|ORG-shin.R/rig_mullet|ORG-heel.R/rig_mullet|ORG-heel.02.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|chest
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|chest/rig_mullet|MCH-sub_chest
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex/rig_mullet|MCH-hips.reverse
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex/rig_mullet|MCH-spine.flex_s
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex/rig_mullet|MCH-spine.flex_s/rig_mullet|MCH-spine.flex
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex/rig_mullet|MCH-spine.flex_s/rig_mullet|MCH-spine.flex/rig_mullet|MCH-chest.flex_s
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex/rig_mullet|MCH-spine.flex_s/rig_mullet|MCH-spine.flex/rig_mullet|MCH-chest.flex_s/rig_mullet|MCH-chest.flex
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex/rig_mullet|MCH-spine.flex_s/rig_mullet|MCH-spine.flex/rig_mullet|MCH-chest.flex_s/rig_mullet|MCH-chest.flex/rig_mullet|MCH-chest.reverse
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-hips.flex_s/rig_mullet|MCH-hips.flex/rig_mullet|MCH-spine.flex_s/rig_mullet|MCH-spine.flex/rig_mullet|MCH-spine.reverse
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|hips/rig_mullet|MCH-sub_hips
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|MCH-par_spine
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|MCH-par_spine/rig_mullet|spine
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|torso/rig_mullet|MCH-par_spine/rig_mullet|spine/rig_mullet|MCH-sub_spine
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-foot.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-foot.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-hand.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-hand.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-thigh_pole.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-thigh_pole.ik.R
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-upper_arm_pole.ik.L
+        weight: 1
+      - path: rig_mullet/rig_mullet|root/rig_mullet|VIS-upper_arm_pole.ik.R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rig_mullet|Flyingkick
+      takeName: rig_mullet|Run_with mullet
+      firstFrame: 0
+      lastFrame: .100000001
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -4390,7 +5497,7 @@ ModelImporter:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

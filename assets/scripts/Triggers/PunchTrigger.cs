@@ -6,13 +6,13 @@ public class PunchTrigger : MonoBehaviour
 {
 	public float respawnTime = 0.5f;
 
-	public bool active = false;
+	public bool hitSomeone = false;
+
+	public bool collided = false;
 
 	Mordecai _player;
 
 	//CharacterController _controller;
-
-	bool _collided = false;
 
 
 
@@ -26,11 +26,11 @@ public class PunchTrigger : MonoBehaviour
 	
 	void OnTriggerStay( Collider col ) 
 	{
-		if( _collided || !active ) return;
+		if( collided || !active ) return;
 	
 		if( col.tag == "Enemy" ) 
 		{
-			_collided = true;
+			collided = true;
 			col.GetComponent<Enemy>().TakeDamage( _player.GetComponent<Status>().Power );
 
 
@@ -40,6 +40,7 @@ public class PunchTrigger : MonoBehaviour
 			//Debug.Log(_player.animationCount);
 			//Debug.Log(_player.AttackAnimations.Length);
 			//Debug.Log(_controller);
+
 
 			// voadora - mesma coisa
 			if( _player.animationCount >= _player.AttackAnimations.Length ||
@@ -58,6 +59,6 @@ public class PunchTrigger : MonoBehaviour
 	}
 	
 	
-	void RestartItem() { _collided = false; }
+	void RestartItem() { collided = false; }
 
 }
