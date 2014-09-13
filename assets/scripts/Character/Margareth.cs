@@ -6,8 +6,6 @@ public class Margareth : MonoBehaviour
 
 	public Transform target;
 
-
-
 	public string IdleAnimation;
 
 	public string WalkAnimation;
@@ -15,22 +13,16 @@ public class Margareth : MonoBehaviour
 	public string HitAnimation;
 
 	public string DieAnimation;
-
-
-
+	
 	public bool walking;
 
 	public bool hitted;
 
 	public bool dying;
 
-	
-
 	Animation _animations;
 
 	Status _status;
-
-
 
 	void Start() 
 	{
@@ -41,10 +33,11 @@ public class Margareth : MonoBehaviour
 	}
 	
 
-
+	float limitZ = -2.984886f;
 
 	void Update()
 	{
+
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0;
@@ -53,10 +46,21 @@ public class Margareth : MonoBehaviour
 		else transform.LookAt( Vector3.back );
 
 		//transform.LookAt( targetWithoutY );
+		Debug.Log (target.position.z);
 
-		if (dir.magnitude > 5)
+
+
+		if (dir.magnitude > 5 && (target.position.z >= limitZ))
 		{
-			transform.position = Vector3.MoveTowards(transform.position, target.position, 0.06f);
+			Vector3 pos = new Vector3(
+				target.position.x,
+				target.position.y,
+				limitZ
+				);
+
+			//target.position
+
+				transform.position = Vector3.MoveTowards(transform.position, pos, 0.06f);
 			walking = true;
 			//transform.position = Vector3.forward * 3 * Time.deltaTime;
 		} else {
@@ -80,6 +84,10 @@ public class Margareth : MonoBehaviour
 		else {
 			_animations.CrossFade( IdleAnimation );
 		}
+
+
+
+
 
 	}
 

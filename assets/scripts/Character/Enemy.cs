@@ -88,7 +88,6 @@ public class Enemy : MonoBehaviour
 		}
 
 
-
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0; 
