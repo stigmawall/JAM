@@ -26,7 +26,7 @@ public class ControlEnemy : MonoBehaviour {
 
 	void setVisible(int index,bool visible){
 		Transform t = enemy[index].transform.Find("Mordecai.001");
-		t.gameObject.renderer.enabled = false;
+		t.gameObject.renderer.enabled = visible;
 	}
 
 	void setTarget(int index,Transform t){
@@ -86,7 +86,7 @@ public class ControlEnemy : MonoBehaviour {
 		if (index >= count) {
 			return false;
 		}
-
+		Debug.Log (index);
 		setVisible(index,true);
 
 		enemy [index].transform.position = new Vector3 (

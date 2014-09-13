@@ -24,7 +24,9 @@ public class Mordecai : MonoBehaviour
 	public string AssistAnimation;
 
 
-	
+	public string WalkAnimation;
+
+	public string JumpAnimation;
 
 	public bool attacking;
 
@@ -46,7 +48,7 @@ public class Mordecai : MonoBehaviour
 
 	int _animationPlayed;
 
-
+	public int runMaxAnimationSpeed = 1;
 
 
 	void Start() 
@@ -58,6 +60,34 @@ public class Mordecai : MonoBehaviour
 		_punch = GetComponentInChildren<PunchTrigger>();
 	}
 	
+
+	public void animateState(CharacterBeatenUp.CharacterState state ){
+
+		_animations = (Animation)GetComponent(typeof(Animation));
+		if(state == CharacterBeatenUp.CharacterState.Jumping) 
+		{
+			CharacterController controller = GetComponent<CharacterController>();
+			_animations[JumpAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
+			_animations.CrossFade(JumpAnimation);	
+			/*
+			if(!jumpingReachedApex) {
+				_animations[jumpPoseAnimation.name].speed = jumpAnimationSpeed;
+				_animations[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
+				_animations.CrossFade(jumpPoseAnimation.name);
+			} else {
+				_animations[jumpPoseAnimation.name].speed = -landAnimationSpeed;
+				_animations[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
+				_animations.CrossFade(jumpPoseAnimation.name);				
+			}
+			*/
+		} 
+		if (state == CharacterBeatenUp.CharacterState.Walking) {
+			CharacterController controller = GetComponent<CharacterController>();
+			_animations[WalkAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
+			_animations.CrossFade(WalkAnimation);	
+
+		}
+	}
 
 
 
@@ -110,6 +140,7 @@ public class Mordecai : MonoBehaviour
 		Debug.Log ( "DAMAGE - " + _status.HP );
 	}
 
+	
 
 	public void Heal( float value ) 
 	{
@@ -117,6 +148,7 @@ public class Mordecai : MonoBehaviour
 		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
 		Debug.Log ( "HEAL - " + _status.HP );
 	}
+
 
 
 
@@ -130,6 +162,10 @@ public class Mordecai : MonoBehaviour
 	{
 		attacking = true;
 
+
+
+
+		Debug.Log (_animationCount);
 		// primeiro soco
 		_animations.CrossFade( AttackAnimations[ _animationCount ] );
 		_animationCount++;

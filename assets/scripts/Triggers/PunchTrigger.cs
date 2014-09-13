@@ -10,7 +10,7 @@ public class PunchTrigger : MonoBehaviour
 
 	Mordecai _player;
 
-	CharacterController _controller;
+	//CharacterController _controller;
 
 	bool _collided = false;
 
@@ -18,8 +18,8 @@ public class PunchTrigger : MonoBehaviour
 
 
 	void Start() {
-
 		_player = GetComponentInParent<Mordecai>();
+		//_controller = GetComponent<CharacterController>();
 	}
 	
 	
@@ -36,10 +36,14 @@ public class PunchTrigger : MonoBehaviour
 
 			// ultimo golpe = empurra o inimigo
 			// ou faz ele cair
+			//Debug.Log(_player);
+			//Debug.Log(_player.animationCount);
+			//Debug.Log(_player.AttackAnimations.Length);
+			//Debug.Log(_controller);
 
 			// voadora - mesma coisa
 			if( _player.animationCount >= _player.AttackAnimations.Length ||
-			   _player.attacking && ( !_controller.isGrounded && _controller.velocity.y!=0 ) ) 
+			   _player.attacking )// && ( !_controller.isGrounded && _controller.velocity.y!=0 ) 
 			{
 
 				Vector3 vec = col.transform.position;

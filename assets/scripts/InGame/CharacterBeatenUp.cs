@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharacterBeatenUp : MonoBehaviour {
 
-
+	public Mordecai hero = null;
 
 
 	public float speed = 6.0F;
@@ -14,7 +14,7 @@ public class CharacterBeatenUp : MonoBehaviour {
 	public float x = 0.0F;
 	public float z = 0.0F;
 
-	enum CharacterState {
+	public enum CharacterState {
 		Idle,
 		Walking,
 		Trotting,
@@ -26,7 +26,7 @@ public class CharacterBeatenUp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		hero = GetComponent<Mordecai> ();
 	}
 	
 	// Update is called once per frame
@@ -70,6 +70,8 @@ public class CharacterBeatenUp : MonoBehaviour {
 				moveDirection.y = jumpSpeed;
 				state = CharacterState.Jumping;
 			}
+
+			hero.animateState(state);
 
 		}
 		moveDirection.y -= gravity * Time.deltaTime;
