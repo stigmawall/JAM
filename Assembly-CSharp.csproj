@@ -57,6 +57,7 @@
      <Compile Include="assets\scripts\Character\Enemy.cs" />
      <Compile Include="assets\scripts\Character\Margareth.cs" />
      <Compile Include="assets\scripts\Character\Mordecai.cs" />
+     <Compile Include="assets\scripts\Character\Status.cs" />
      <Compile Include="assets\scripts\ControlDoor.cs" />
      <Compile Include="assets\scripts\ControlDoorTwo.cs" />
      <Compile Include="assets\scripts\ControlManHole.cs" />

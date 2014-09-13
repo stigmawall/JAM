@@ -47,8 +47,12 @@ public class Margareth : MonoBehaviour
 	{
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
-		dir.y = 0; 
-		transform.LookAt( target );
+		dir.y = 0;
+
+		if( dir.x < 0 ) transform.LookAt( Vector3.forward );
+		else transform.LookAt( Vector3.back );
+
+		//transform.LookAt( targetWithoutY );
 
 		if (dir.magnitude > 5)
 		{

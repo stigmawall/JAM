@@ -10,6 +10,8 @@ public class PunchTrigger : MonoBehaviour
 
 	Mordecai _player;
 
+	CharacterController _controller;
+
 	bool _collided = false;
 
 
@@ -30,6 +32,22 @@ public class PunchTrigger : MonoBehaviour
 		{
 			_collided = true;
 			col.GetComponent<Enemy>().TakeDamage( _player.GetComponent<Status>().Power );
+
+
+			// ultimo golpe = empurra o inimigo
+			// ou faz ele cair
+
+			// voadora - mesma coisa
+			if( _player.animationCount >= _player.AttackAnimations.Length ||
+			   _player.attacking && ( !_controller.isGrounded && _controller.velocity.y!=0 ) ) 
+			{
+
+				Vector3 vec = col.transform.position;
+				vec -= _player.transform.position;
+				vec.Normalize();
+				vec *= 20;
+				col.rigidbody.AddForce(vec,ForceMode.Impulse);
+			}
 			
 			if( respawnTime > 0 ) Invoke( "RestartItem", respawnTime );
 		}

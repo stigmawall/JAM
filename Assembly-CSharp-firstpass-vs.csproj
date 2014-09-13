@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="assets\Standard Assets\Character Controllers\Sources\Scripts\Status.cs" />
      <Compile Include="assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
      <Compile Include="assets\Standard Assets\Water (Basic)\Sources\Scripts\WaterSimple.cs" />
      <None Include="assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />

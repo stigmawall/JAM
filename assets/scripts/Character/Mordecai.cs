@@ -103,6 +103,7 @@ public class Mordecai : MonoBehaviour
 		} else {
 
 			StartCoroutine( GetHit() );
+			iTween.ShakePosition( this.gameObject, new Vector3(0.4f,0,0), 0.6f );
 		}
 
 		// imprime o valor atual
@@ -140,6 +141,7 @@ public class Mordecai : MonoBehaviour
 		_punch.active = true;
 
 		yield return new WaitForSeconds( 0.3f );
+
 
 		_punch.active = false;
 		_animationPlayed++;
@@ -194,10 +196,25 @@ public class Mordecai : MonoBehaviour
 		dying = true;
 		_animations.CrossFade( DieAnimation );
 		yield return new WaitForSeconds( 2 );
-
+		
 		// nao cancela na real, mas para testes, sim
 		dying = false;
 		yield break;
+	}
+
+
+
+
+
+
+
+	public float animationCount {
+		get { return _animationCount; }
+	}
+
+
+	public float animationPlayed {
+		get { return _animationPlayed; }
 	}
 
 }

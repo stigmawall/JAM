@@ -57,43 +57,49 @@ public class Enemy : MonoBehaviour
 
 	void Update()
 	{
+
+		// control animations
+		if( dying ) {
+			_animations.CrossFade( DieAnimation );
+			return;
+		} 
+		
+		else if( hitted ) {
+			_animations.CrossFade( HitAnimation );
+			return;
+		}
+		
+		else if( walking ) {
+			_animations.CrossFade( WalkAnimation );
+		}
+		
+		else if( attacking ) {
+			_animations.CrossFade( HitAnimation );
+		}
+		
+		else {
+			_animations.CrossFade( IdleAnimation );
+		}
+
+
+
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0; 
-		transform.LookAt( target );
+		//transform.LookAt( target );
+		if( dir.x < 0 ) transform.LookAt( Vector3.forward );
+		else transform.LookAt( Vector3.back );
 
 
-		if (dir.magnitude > distance && !hitted && !dying && !attacking )
+		if (dir.magnitude > distance )
 		{
 			transform.position = Vector3.MoveTowards(transform.position, target.position, 0.06f);
 			walking = true;
 			//transform.position = Vector3.forward * 3 * Time.deltaTime;
 		} else {
 			walking = false;
-			if( !attacking )
+			if( !attacking || !hitted || !dying )
 				StartCoroutine( Punch() );
-		}
-		
-
-		// control animations
-		if( attacking ) {
-			_animations.CrossFade( HitAnimation );
-		}
-
-		else if( hitted ) {
-			_animations.CrossFade( HitAnimation );
-		}
-
-		else if( walking ) {
-			_animations.CrossFade( WalkAnimation );
-		}
-
-		else if( dying ) {
-			_animations.CrossFade( DieAnimation );
-		}
-
-		else {
-			_animations.CrossFade( IdleAnimation );
 		}
 
 	}
@@ -107,7 +113,7 @@ public class Enemy : MonoBehaviour
 	{
 		attacking = true;
 
-		_animations.CrossFade( AttackAnimations[ _animationCount ] );
+		_animations.CrossFade( AttackAnimations[ 0 ] );
 		_animationCount++;
 
 		yield return new WaitForSeconds( 0.1f );
@@ -139,10 +145,10 @@ public class Enemy : MonoBehaviour
 		
 		if( _status.HP <= 0 ) 
 		{
-			//StartCoroutine( Dying() );
+			StartCoroutine( Dying() );
 		} else {
-			
-			//StartCoroutine( GetHit() );
+			iTween.ShakePosition( this.gameObject, new Vector3(0.4f,0,0), 0.6f );	
+			StartCoroutine( GetHit() );
 		}
 		
 		// imprime o valor atual
@@ -157,6 +163,40 @@ public class Enemy : MonoBehaviour
 		_status.HP += value;
 		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
 		Debug.Log ( "HEAL ENEMY - " + _status.HP );
+	}
+
+
+
+
+	/// <summary>
+	/// Animate him taking hit.
+	/// </summary>
+	IEnumerator GetHit()
+	{
+		hitted = true;
+		_animations.CrossFade( HitAnimation );
+		yield return new WaitForSeconds( 1 );
+		hitted = false;
+		yield break;
+	}
+	
+	
+	
+	
+	
+	/// <summary>
+	/// Animate the payer to die
+	/// </summary>
+	IEnumerator Dying()
+	{
+		dying = true;
+		_animations.CrossFade( DieAnimation );
+		yield return new WaitForSeconds( 3 );
+
+		Destroy( this.gameObject );
+		//// nao cancela na real, mas para testes, sim
+		//dying = false;
+		yield break;
 	}
 
 
