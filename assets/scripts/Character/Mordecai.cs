@@ -46,6 +46,8 @@ public class Mordecai : MonoBehaviour
 
 	public bool dying;
 
+	public bool dead;
+
 	public bool assisted;
 
 
@@ -68,7 +70,7 @@ public class Mordecai : MonoBehaviour
 
 	void Start() 
 	{
-		attacking = hitted = dying = false;
+		attacking = hitted = dying = dead = false;
 		_animationCount = _animationPlayed = 0;
 		isStand = true;
 		_animations = (Animation)GetComponent(typeof(Animation));
@@ -97,7 +99,7 @@ public class Mordecai : MonoBehaviour
 		{
 			isStand = false;
 			//_animations[JumpAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
+			//_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
 			_animations.CrossFade(JumpAnimation);
 
 		} 
@@ -112,7 +114,7 @@ public class Mordecai : MonoBehaviour
 		{
 			isStand = true;
 			//_animations[WalkAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
+			//_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
 			_animations[IdleAnimation].wrapMode = WrapMode.Loop;
 			_animations.CrossFade( IdleAnimation );
 		}
@@ -122,6 +124,10 @@ public class Mordecai : MonoBehaviour
 
 	void Update()
 	{
+		// Se estiver morrendo, nada faz
+		if( dying ) return;
+
+
 		// atacando - no chao e no ar
 		if( Input.GetKey( KeyCode.O ) && !attacking ) 
 		{
@@ -133,6 +139,7 @@ public class Mordecai : MonoBehaviour
 				StartCoroutine( FlyingKick() );
 			}
 		}
+
 
 		// chamando o assist 
 		if( Input.GetKeyDown( KeyCode.P ) && HUDController.instance.canUseAssist && !assisted ) 
@@ -147,7 +154,8 @@ public class Mordecai : MonoBehaviour
 			Vector3 bp = BlackMood.gameObject.transform.localPosition;
 			bp.x = 2;
 			BlackMood.gameObject.transform.localPosition = bp;
-			iTween.FadeFrom( BlackMood.gameObject, 0, 0.5f );
+			iTween.FadeTo( BlackMood.gameObject, 0, 0.01f );
+			iTween.FadeTo( BlackMood.gameObject, 0.4f, 1 );
 
 			// anima o sprite
 			iTween.MoveTo( AssistSprite.gameObject, 
@@ -191,23 +199,7 @@ public class Mordecai : MonoBehaviour
 		HUDController.instance.StartAssist();
 
 		// desejo a todas inimigas vida longa #sqn
-		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		foreach( GameObject ene in enemies ) 
-		{
-			Enemy e = ene.GetComponent<Enemy>();
-			e.TakeDamage( 150 );
-
-			// morreu? voa - odeio repetir, mas nao vi outra forma :/
-			if( e.status.HP <= 0 )
-			{
-				Vector3 vec = e.transform.position;
-				vec -= transform.position;
-				vec += Vector3.up;
-				vec.Normalize();
-				vec *= 100;
-				e.rigidbody.AddForce(vec,ForceMode.Impulse);
-			}
-		}
+		HitAllEnemies( 150, 80 );
 	}
 
 
@@ -220,7 +212,7 @@ public class Mordecai : MonoBehaviour
 	{
 
 		// marca o dano
-		_status.HP -= damage;
+		_status.Damage( damage );
 
 		if( _status.HP <= 0 ) 
 		{
@@ -232,19 +224,22 @@ public class Mordecai : MonoBehaviour
 		}
 
 		// imprime o valor atual
-		Debug.Log ( "DAMAGE - " + _status.HP );
+		//Debug.Log ( "DAMAGE - " + _status.HP );
 
 		// atualiza a hud
 		HUDController.instance.UpdateLifebarInfo( _status.HP, _status.MAXHP );
 	}
 
-	
+
+
+
 
 	public void Heal( float value ) 
 	{
-		_status.HP += value;
-		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
-		Debug.Log ( "HEAL - " + _status.HP );
+		_status.Heal( value );
+
+		// atualiza a hud
+		HUDController.instance.UpdateLifebarInfo( _status.HP, _status.MAXHP );
 	}
 
 
@@ -308,6 +303,7 @@ public class Mordecai : MonoBehaviour
 
 
 
+
 	/// <summary>
 	/// Animate him taking hit.
 	/// </summary>
@@ -330,15 +326,92 @@ public class Mordecai : MonoBehaviour
 	IEnumerator Dying()
 	{
 		dying = true;
+		dead = true;
 		_animations.Play( DieAnimation );
-		yield return new WaitForSeconds( 2 );
+		yield return new WaitForSeconds( 1 );
+
+		// pisca o jogador caido
+		//this.renderer.enabled = false;
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );		
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+
+
+		// caso tenha mais vidas, subtrai uma e volta a vida
+		if( HUDController.instance.lives>0 ) 
+		{
+
+			GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+
+			// remove uma bola da tela
+			Destroy( GameObject.Find ("HUD_live" + HUDController.instance.lives).gameObject );
+			HUDController.instance.lives--;
+
+			// coloca o personagem pra cair na tela
+			// para a camera por uns instantes
+			Vector3 p = transform.position;
+			p.y = 12;
+			transform.position = p;
+			dying = false;
+			Heal( _status.MAXHP );
+
+
+			// depois de um tempo, volta
+			yield return new WaitForSeconds( 1 );
+
+			// revive
+			animateState( CharacterBeatenUp.CharacterState.Jumping );
+			dead = false;
+
+			// causa dano  e treme
+			HitAllEnemies( 20, 20 );
+			iTween.ShakePosition( this.gameObject, new Vector3(0.6f,0), 0.3f );
+
+		} else {
+
+			Debug.Log ("GAME OVER");
+		}
+
+
+		//lives
+
 		
 		// nao cancela na real, mas para testes, sim
-		dying = false;
+		//dying = false;
 		yield break;
 	}
 
 
+
+
+	// desejo a todas inimigas vida longa #sqn
+	public void HitAllEnemies( float damage, float push ) {
+
+		// teste - para ver o que fazer
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach( GameObject ene in enemies ) 
+		{
+			Enemy e = ene.GetComponent<Enemy>();
+			e.TakeDamage( 150 );
+			
+			// morreu? voa - odeio repetir, mas nao vi outra forma :/
+			if( e.status.HP <= 0 )
+			{
+				Vector3 vec = e.transform.position;
+				vec -= transform.position;
+				vec += Vector3.up;
+				vec.Normalize();
+				vec *= push;
+				e.rigidbody.AddForce(vec,ForceMode.Impulse);
+			}
+		}
+	}
 
 
 

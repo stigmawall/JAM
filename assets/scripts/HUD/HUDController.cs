@@ -19,10 +19,15 @@ public class HUDController : MonoBehaviour {
 
 	public bool canUseAssist = false;
 
+	public int lives = 3;
+
+
+
 	
 	bool _assistActive;
 
 	float _assistTimeCount;
+
 
 
 
@@ -94,8 +99,9 @@ public class HUDController : MonoBehaviour {
 	// inicia contagem do tempo e aumento da barra
 	public void StartAssist() {
 
-		_assistActive = true;
+		canUseAssist = false;
 		_assistTimeCount = 0;
+		_assistActive = true;
 	}
 
 

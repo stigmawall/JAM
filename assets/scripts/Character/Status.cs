@@ -16,13 +16,20 @@ public class Status : MonoBehaviour {
 	public float AssistIncreaseBarSpeed = 1;
 
 
+	public void Heal( float value ) {
+		_HP += ( value > _MAXHP ) ? _MAXHP : value; 
+	}
+
+
+	public void Damage( float value ) {
+		_HP -= ( value - _Defense );
+		if( _HP < 0 ) _HP = 0;
+	}
+
+
 	public float HP {
 		get { return _HP; }
-		set {
-			value -= _Defense;
-			if( value < 0 ) value = 0;
-			_HP = ( value > _MAXHP ) ? _MAXHP : ( _HP-value <= 0 ) ? 0 : value; 
-		}
+		set { _HP = value; }
 	}
 
 	public float MAXHP {
