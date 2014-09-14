@@ -14,8 +14,7 @@ public class Status : MonoBehaviour {
 	// pode separar os poder por assist e nao em um geral
 	public float AssistPower = 1;
 	public float AssistIncreaseBarSpeed = 1;
-
-
+	
 	public void Heal( float value ) {
 		_HP = ( value > _MAXHP ) ? _MAXHP : _HP + value;
 		_HP = ( value > _MAXHP ) ? _MAXHP : _HP;

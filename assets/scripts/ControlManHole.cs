@@ -15,6 +15,9 @@ public class ControlManHole : MonoBehaviour {
 	public float secondsCloseDoor = 1f; 
 	
 	protected float secondsWaitClose = 0f; 
+
+	public Animation boeiro = null;
+
 	
 	void Start(){
 		//Debug.Log("chegou!!!");
@@ -43,6 +46,8 @@ public class ControlManHole : MonoBehaviour {
 		if(collision.gameObject.layer ==9 )//"Player"
 		{
 			action = actionOnCollide;
+
+			boeiro.Play ("Armature|Bueiro_Out");
 
 			//abre porta
 			if(action == Action.open ){
@@ -73,6 +78,7 @@ public class ControlManHole : MonoBehaviour {
 	}
 
 	void Update () {
+		/*
 		//tempo para fechar a porta
 		if (action == ControlManHole.Action.opened) {
 			secondsWaitClose = secondsWaitClose - Time.deltaTime;
@@ -85,6 +91,7 @@ public class ControlManHole : MonoBehaviour {
 
 			}
 		}
+		*/
 	}
 	
 }
