@@ -6,7 +6,8 @@ public class SuperJump : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.layer == 9) {
-			col.gameObject.transform.Translate(Vector3.forward * jumpSpeed * Time.deltaTime);
+			CharacterBeatenUp cb = col.gameObject.GetComponent<CharacterBeatenUp>();
+			cb.superJump( jumpSpeed );
 		}
 	}
 }

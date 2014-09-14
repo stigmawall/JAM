@@ -33,7 +33,23 @@ public class CharacterBeatenUp : MonoBehaviour {
 		hero = GetComponent<Mordecai> ();
 	}
 
+	public void superJump(float force){
+		if( hero.dying || hero.hitted || !hero.controlling ) return;
 
+		CharacterController controller = GetComponent<CharacterController>();
+
+		x = 0.0F;
+		z = 0.0F;
+		state = CharacterState.Walking;
+		
+		moveDirection.y = force;
+		//state = CharacterState.Jumping;
+
+		hero.animateState(state);
+
+		moveDirection.y -= gravity * Time.deltaTime;
+		controller.Move(moveDirection * Time.deltaTime);
+	}
 	
 	// Update is called once per frame
 	void Update () 
