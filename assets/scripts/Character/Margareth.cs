@@ -37,7 +37,9 @@ public class Margareth : MonoBehaviour
 
 	void Update()
 	{
-
+		if( Time.timeScale == 0 ){
+			return;
+		}
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0; 
