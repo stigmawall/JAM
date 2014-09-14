@@ -11,6 +11,7 @@ public class CutsceneIntro : Cutscene {
 
 	CutsceneIntro.Action action = CutsceneIntro.Action.Talk;
 
+	/*
 	void modercaTurn(){
 		var tweenParams = new Hashtable();
 		tweenParams.Add("y", 98);
@@ -30,6 +31,7 @@ public class CutsceneIntro : Cutscene {
 
 		iTween.MoveTo(bfg, tweenParams);
 	}
+	*/
 
 	void endCutscene(){
 		stop ();
@@ -50,9 +52,11 @@ public class CutsceneIntro : Cutscene {
 				}
 			}
 		}
+		/*
 		if (action == CutsceneIntro.Action.BFGComming) {
 			action = CutsceneIntro.Action.Wait;
 			modercaTurn();
 		}
+		*/
 	}
 }
