@@ -11,27 +11,6 @@ public class CutsceneIntro : Cutscene {
 
 	CutsceneIntro.Action action = CutsceneIntro.Action.Talk;
 
-	/*
-	void modercaTurn(){
-		var tweenParams = new Hashtable();
-		tweenParams.Add("y", 98);
-		tweenParams.Add("time", 1);
-		tweenParams.Add("oncomplete", "commingBigBoss");
-		tweenParams.Add("oncompletetarget", gameObject);
-
-		iTween.RotateAdd(modercai, tweenParams);
-	}
-
-	void commingBigBoss(){
-		var tweenParams = new Hashtable();
-		tweenParams.Add("x", 1.814845f);
-		tweenParams.Add("time", 1);
-		tweenParams.Add("oncomplete", "endCutscene");
-		tweenParams.Add("oncompletetarget", gameObject);
-
-		iTween.MoveTo(bfg, tweenParams);
-	}
-	*/
 
 	void endCutscene(){
 		stop ();

@@ -56,10 +56,13 @@
      <Compile Include="Assets\Scripts\Character\Margareth.cs" />
      <Compile Include="Assets\Scripts\Character\Mordecai.cs" />
      <Compile Include="Assets\Scripts\Character\Status.cs" />
+     <Compile Include="Assets\Scripts\Cinematic\AnimateCutscene.cs" />
      <Compile Include="Assets\Scripts\Cinematic\Balloon.cs" />
      <Compile Include="Assets\Scripts\Cinematic\Cutscene.cs" />
      <Compile Include="Assets\Scripts\Cinematic\CutsceneIntro.cs" />
      <Compile Include="Assets\Scripts\Cinematic\CutsceneIntro2.cs" />
+     <Compile Include="Assets\Scripts\Cinematic\ShowBFG.cs" />
+     <Compile Include="Assets\Scripts\Cinematic\TeleportSomethings.cs" />
      <Compile Include="Assets\Scripts\ControlDoor.cs" />
      <Compile Include="Assets\Scripts\ControlDoorTwo.cs" />
      <Compile Include="Assets\Scripts\ControlManHole.cs" />
