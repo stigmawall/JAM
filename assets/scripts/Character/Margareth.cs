@@ -24,13 +24,19 @@ public class Margareth : MonoBehaviour
 
 	public bool invulnerable;
 
+
+
 	Animation _animations;
 
 	Status _status;
 
+	bool stand;
+
+
+
 	void Start() 
 	{
-		walking = hitted = dying = false;
+		walking = hitted = stand = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
 		_status = GetComponent<Status>();
 		//_controller = (CharacterController)GetComponent(typeof(CharacterController));
@@ -41,7 +47,7 @@ public class Margareth : MonoBehaviour
 
 	void Update()
 	{
-		if( Time.timeScale == 0 ){
+		if( Time.timeScale == 0 || dead || dying ){
 			return;
 		}
 
@@ -78,27 +84,30 @@ public class Margareth : MonoBehaviour
 		} else {
 			walking = false;
 		}
-		
-		
+
+
+
 		
 		if( hitted ) {
-			_animations.CrossFade( HitAnimation );
+			_animations.Play( HitAnimation );
+			return;
 		}
 
 		else if( walking ) {
-			_animations.CrossFade( WalkAnimation );
+			_animations.Play( WalkAnimation );
 		}
 
 		else if( dying ) {
-			_animations.CrossFade( DieAnimation );
+			_animations.Play( DieAnimation );
 		}
 
 		else {
-			_animations.CrossFade( IdleAnimation );
+			if( !stand ) {
+				_animations.Play( "Fix" );
+			}
+			stand = true;
+			_animations.Play( IdleAnimation );
 		}
-
-
-
 
 
 	}
@@ -118,14 +127,14 @@ public class Margareth : MonoBehaviour
 		
 		if( _status.HP <= 0 ) 
 		{
-			//StartCoroutine( Dying() );
+			StartCoroutine( Dying() );
 		} else {
-			
-			//StartCoroutine( GetHit() );
+			StartCoroutine( GetHit() );
 		}
 		
 		// imprime o valor atual
-		Debug.Log ( "DAMAGE MAGGIE - " + _status.HP );
+		HUDController.instance.UpdateMaggieLifebarInfo( _status.HP, _status.MAXHP );
+		//Debug.Log ( "DAMAGE MAGGIE - " + _status.HP );
 	}
 	
 
@@ -135,7 +144,6 @@ public class Margareth : MonoBehaviour
 	{
 		_status.Heal(value);
 		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
-		Debug.Log ( "HEAL MAGGIE - " + _status.HP );
 	}
 
 
@@ -167,6 +175,39 @@ public class Margareth : MonoBehaviour
 		yield return new WaitForSeconds( 0.2f );
 		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
 		invulnerable = false;
+	}
+
+
+
+	/// <summary>
+	/// Animate him taking hit.
+	/// </summary>
+	IEnumerator GetHit()
+	{
+		hitted = true;
+		_animations.CrossFade( HitAnimation );
+		yield return new WaitForSeconds( 0.5f );
+		hitted = false;
+		_animations.Play( "rig_margaret|Run_Margaret" );
+		yield return new WaitForSeconds( 0.01f );
+		yield break;
+	}
+
+
+
+	/// <summary>
+	/// Animate the enemy to die
+	/// na real ele vai voar longe
+	/// </summary>
+	IEnumerator Dying()
+	{
+		dying = true;
+		_animations.CrossFade( DieAnimation );
+		yield return new WaitForSeconds( 2 );
+		Destroy( this.gameObject );
+
+		// chama um gameover daqui
+		yield break;
 	}
 
 

@@ -49,8 +49,12 @@ public class EnemyPunchTrigger : MonoBehaviour
 			// ultimo golpe = empurra o inimigo
 			// ou faz ele cair
 			// voadora - mesma coisa
-			if( _enemy.animationCount >= _enemy.AttackAnimations.Length ) {
-				col.GetComponent<Mordecai>().Fall();
+			if( _enemy.animationCount >= _enemy.AttackAnimations.Length ) 
+			{
+				if( col.GetComponent<Mordecai>() )
+					col.GetComponent<Mordecai>().Fall();
+				else
+					col.GetComponent<Margareth>().Fall();
 			}
 
 

@@ -225,6 +225,7 @@ public class Mordecai : MonoBehaviour
 
 
 		// para testes: animaçao caso seja atingido
+		/*
 		if( Input.GetKey( KeyCode.I ) )  {
 			StartCoroutine( GetHit() );
 		}
@@ -233,6 +234,7 @@ public class Mordecai : MonoBehaviour
 		if( Input.GetKey( KeyCode.U ) )  {
 			StartCoroutine( Dying() );
 		}
+		*/
 	}
 
 

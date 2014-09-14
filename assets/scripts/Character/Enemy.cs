@@ -4,9 +4,11 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
 
+	public Transform target1;
+
+	public Transform target2;
+
 	public Transform target;
-
-
 
 	public string name = "Unicorn";
 
@@ -41,7 +43,7 @@ public class Enemy : MonoBehaviour
 	public ControlEnemy controlEnemy; 
 
 
-
+	
 
 	Animation _animations;
 
@@ -64,6 +66,12 @@ public class Enemy : MonoBehaviour
 	 	//GameObject go = (GameObject)Instantiate(Resources.Load(pictureResource));
 		//picture = go.GetComponent<SpriteRenderer>();
 		//SpriteRenderer picture
+
+		// escolhe qual dos adversarios ele vai
+		int esc = Random.Range(0,2);
+		Debug.Log ( esc );
+		if( esc==0 ) target = target1;
+		else target = target2;
 
 		walking = attacking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
@@ -257,7 +265,7 @@ public class Enemy : MonoBehaviour
 	{
 		hitted = true;
 		_animations.CrossFade( HitAnimation );
-		yield return new WaitForSeconds( 1 );
+		yield return new WaitForSeconds( 0.5f );
 		hitted = false;
 		yield break;
 	}

@@ -14,6 +14,8 @@ public class HUDController : MonoBehaviour {
 	
 	public SpriteRenderer lifebar;
 
+	public SpriteRenderer maggielifebar;
+
 	public SpriteRenderer assistbar;
 
 	public SpriteRenderer enemylife;
@@ -71,6 +73,7 @@ public class HUDController : MonoBehaviour {
 			if(this != _instance) Destroy(this.gameObject);
 		}
 
+		actualPic = GameObject.Find ("HUD_enemyUnicornHead").GetComponent<SpriteRenderer>();
 		RemoveEnemyStatus();
 		StartAssist();
 	}
@@ -131,6 +134,22 @@ public class HUDController : MonoBehaviour {
 
 
 
+	public void UpdateMaggieLifebarInfo( float hp, float max ) 
+	{
+		// caso esqueça de setar o lifebar
+		if(maggielifebar==null) {
+			Debug.Log ("Da um setada no Lifebar");
+			return;
+		}
+		
+		Vector3 pos = maggielifebar.gameObject.transform.localScale;
+		pos.x = hp / max;
+		if( pos.x < 0 ) pos.x = 0;
+		maggielifebar.gameObject.transform.localScale = pos;
+	}
+
+
+
 	public void UpdateEnemyLifebarInfo( float hp, float max, SpriteRenderer pic=null, string name="" )
 	{
 		// caso esqueça de setar o lifebar
@@ -148,12 +167,14 @@ public class HUDController : MonoBehaviour {
 		// show pic
 		enemylife.enabled = true;
 		enemylifebar.enabled = true;
-		if(actualPic) actualPic.enabled = false;
+		actualPic.enabled = true;
+		//if(actualPic) actualPic.enabled = false;
 
+		/*
 		if (pic) {
 			pic.enabled = true;
 			actualPic = pic;
-		}
+		}*/
 
 		// remove se demorar demais pra bater
 		Invoke ( "RemoveEnemyStatus", 3 );
