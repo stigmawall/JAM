@@ -9,7 +9,9 @@ public class ControlEnemy : MonoBehaviour {
 	public GameObject target = null;
 
 	public GameObject blockedLeft = null;
-	
+
+	public SpriteRenderer hud = null;
+
 	public int level = 1;
 
 	public int count = 1;
@@ -57,7 +59,7 @@ public class ControlEnemy : MonoBehaviour {
 			enemy[i] = (GameObject)Instantiate(Resources.Load("inimigo", typeof(GameObject)));
 
 			setControl(index);
-
+			//setHud(index);
 			setVisible(index,false);
 			//index
 			setTarget(index,target.transform);
@@ -65,6 +67,14 @@ public class ControlEnemy : MonoBehaviour {
 		nextEnemy();
 		action = ControlEnemy.Action.Actived;
 	}
+
+	/*
+	void setHud(int index){
+		Enemy enemy = enemy[index].GetComponent<Enemy>();
+		enemy.picture = hud.material.mainTexture;
+	}
+	*/
+
 
 	void Update(){
 		if (action == ControlEnemy.Action.NoMore) {
@@ -80,7 +90,7 @@ public class ControlEnemy : MonoBehaviour {
 
 		if (level == 1) {
 			seconds = seconds - Time.deltaTime;
-			Debug.Log(seconds);
+			//Debug.Log(seconds);
 			if( seconds <= 0 ){
 				if( nextEnemy() == false ){
 					//todo: ver como desabilitar ao inves de destruir

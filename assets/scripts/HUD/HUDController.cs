@@ -130,7 +130,7 @@ public class HUDController : MonoBehaviour {
 
 
 
-	public void UpdateEnemyLifebarInfo( float hp, float max, SpriteRenderer pic, string name )
+	public void UpdateEnemyLifebarInfo( float hp, float max, SpriteRenderer pic=null, string name="" )
 	{
 		// caso esqueça de setar o lifebar
 		if(enemylifebar==null) 
@@ -148,8 +148,11 @@ public class HUDController : MonoBehaviour {
 		enemylife.enabled = true;
 		enemylifebar.enabled = true;
 		if(actualPic) actualPic.enabled = false;
-		pic.enabled = true;
-		actualPic = pic;
+
+		if (pic) {
+			pic.enabled = true;
+			actualPic = pic;
+		}
 
 		// remove se demorar demais pra bater
 		Invoke ( "RemoveEnemyStatus", 3 );

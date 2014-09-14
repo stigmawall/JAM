@@ -5,14 +5,16 @@ public class Blink : MonoBehaviour {
 
 
 	public string axy = "y";  
+	public float distance = 1.0f;  
 
 	void Start () {
 		show();
+
 	}
 
 	void hide(){
 		Hashtable ht = new Hashtable();
-		ht.Add(axy, 1.0f);
+		ht.Add(axy, distance);
 		ht.Add("time", 1f);
 		ht.Add("easetype", "linear");
 		ht.Add("oncomplete", "show");
@@ -22,7 +24,7 @@ public class Blink : MonoBehaviour {
 
 	void show(){
 		Hashtable ht = new Hashtable();
-		ht.Add(axy, -1.0f);
+		ht.Add(axy, distance*-1);
 		ht.Add("time", 1f);
 		ht.Add("easetype", "linear");
 		ht.Add("oncomplete", "hide");

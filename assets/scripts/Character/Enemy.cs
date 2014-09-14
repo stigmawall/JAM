@@ -7,9 +7,12 @@ public class Enemy : MonoBehaviour
 	public Transform target;
 
 
+
 	public string name = "Unicorn";
 
-	public SpriteRenderer picture;
+	private SpriteRenderer picture;
+
+	public string pictureResource = "";
 
 	public string IdleAnimation;
 
@@ -50,12 +53,14 @@ public class Enemy : MonoBehaviour
 
 	public ControlEnemy controlEnemy; 
 
-
-
-
+	
 
 	void Start() 
 	{
+	 	//GameObject go = (GameObject)Instantiate(Resources.Load(pictureResource));
+		//picture = go.GetComponent<SpriteRenderer>();
+		//SpriteRenderer picture
+
 		walking = attacking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
 		status = GetComponent<Status>();
@@ -98,7 +103,10 @@ public class Enemy : MonoBehaviour
 			}
 		}
 
-
+		if (! target) {
+			iTween.RotateTo(gameObject,iTween.Hash("y",-90,"time",0.1f));
+			return;
+		}
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0; 

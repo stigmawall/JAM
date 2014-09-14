@@ -17,9 +17,9 @@ public class Status : MonoBehaviour {
 
 
 	public void Heal( float value ) {
-		_HP += ( value > _MAXHP ) ? _MAXHP : value; 
+		_HP = ( value > _MAXHP ) ? _MAXHP : _HP + value;
+		_HP = ( value > _MAXHP ) ? _MAXHP : _HP;
 	}
-
 
 	public void Damage( float value ) 
 	{

@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\HUD\HUDController.cs" />
      <Compile Include="Assets\Scripts\InGame\Blink.cs" />
      <Compile Include="Assets\Scripts\InGame\CharacterBeatenUp.cs" />
+     <Compile Include="Assets\Scripts\InGame\Coffe.cs" />
      <Compile Include="Assets\Scripts\InGame\ControlCamera.cs" />
      <Compile Include="Assets\Scripts\InGame\ControlEnemy.cs" />
      <Compile Include="Assets\Scripts\InGame\Indicator.cs" />

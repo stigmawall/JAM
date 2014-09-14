@@ -48,7 +48,9 @@ function LateUpdate () {
 	
 	// Set the position of the camera on the x-z plane to:
 	// distance meters behind the target
-	if( target.GetComponent("Mordecai").dead ) return;
+	if( (target.GetComponent("Mordecai") != null) && ( target.GetComponent("Mordecai").dead ) ){
+		return;
+	}
 	
 	transform.position = target.position;
 	transform.position -= currentRotation * Vector3.forward * distance;

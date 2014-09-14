@@ -83,6 +83,13 @@ public class Mordecai : MonoBehaviour
 		_status = GetComponent<Status>();
 		_punch = GetComponentInChildren<PunchTrigger>();
 		_punch.active = false;
+
+		MeshRenderer mr = BlackMood.GetComponent<MeshRenderer>();
+		mr.renderer.enabled = false;
+
+		SpriteRenderer bm = AssistSprite.GetComponent<SpriteRenderer>();
+		bm.renderer.enabled = false;
+		//BlackMood;
 	}
 	
 
@@ -155,16 +162,27 @@ public class Mordecai : MonoBehaviour
 			// congela o tempo
 			Time.timeScale = 0;
 
+
+
+			MeshRenderer mr = BlackMood.GetComponent<MeshRenderer>();
+			mr.renderer.enabled = true;
+			
+			SpriteRenderer bm = AssistSprite.GetComponent<SpriteRenderer>();
+			bm.renderer.enabled = true;
+
+
+
 			// fundo preto
 			Vector3 bp = BlackMood.gameObject.transform.localPosition;
-			bp.x = 2;
+			bp.x = -5;
 			BlackMood.gameObject.transform.localPosition = bp;
 			iTween.FadeTo( BlackMood.gameObject, 0, 0.01f );
 			iTween.FadeTo( BlackMood.gameObject, 0.4f, 1 );
 
+
 			// anima o sprite
 			iTween.MoveTo( AssistSprite.gameObject, 
-			              	iTween.Hash( "x", 15, "islocal", true,
+			              	iTween.Hash( "x", 20, "islocal", true,
 			            				"time", 1.4f, "easetype", iTween.EaseType.linear,
 			            				"onComplete", "CalculateDamageAndReturnAssist",
 			            				"ignoretimescale", true,
@@ -193,11 +211,11 @@ public class Mordecai : MonoBehaviour
 
 		// fundo preto
 		Vector3 bp = BlackMood.gameObject.transform.localPosition;
-		bp.x = -10;
+		bp.x = -20;
 		BlackMood.gameObject.transform.localPosition = bp;
 
 		// retorna o sprite
-		iTween.MoveTo( AssistSprite.gameObject, iTween.Hash( "x", -15, "time", 0.01f ) );
+		iTween.MoveTo( AssistSprite.gameObject, iTween.Hash( "x", -20, "time", 0.01f ) );
 		assisted = false;
 
 		//reativa a barra de assist
@@ -205,6 +223,14 @@ public class Mordecai : MonoBehaviour
 
 		// desejo a todas inimigas vida longa #sqn
 		HitAllEnemies( 150, 80 );
+
+
+		// remove visibilidade... tipo Barcos
+		MeshRenderer mr = BlackMood.GetComponent<MeshRenderer>();
+		mr.renderer.enabled = false;
+		
+		SpriteRenderer bm = AssistSprite.GetComponent<SpriteRenderer>();
+		bm.renderer.enabled = false;
 	}
 
 
@@ -241,6 +267,7 @@ public class Mordecai : MonoBehaviour
 
 	public void Heal( float value ) 
 	{
+
 		_status.Heal( value );
 
 		// atualiza a hud
