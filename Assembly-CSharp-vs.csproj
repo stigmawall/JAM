@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{1AF7E356-2D58-7119-FE6C-C1ED31A62E64}</ProjectGuid>
+	<ProjectGuid>{8268EC35-B76C-66C9-4768-416A2D80985A}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,105 +39,106 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo\Assets\GUIT_Button.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo\Assets\GUIT_Button_Simple.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo\Assets\GUIText_Color.cs" />
-     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Demo\Assets\TGPDemo.cs" />
-     <Compile Include="Assets\Scripts\BeatenUpCamera.cs" />
-     <Compile Include="Assets\Scripts\ButtonInGame.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Character\Margareth.cs" />
-     <Compile Include="Assets\Scripts\Character\Mordecai.cs" />
-     <Compile Include="Assets\Scripts\Character\Status.cs" />
-     <Compile Include="Assets\Scripts\Cinematic\AnimateCutscene.cs" />
-     <Compile Include="Assets\Scripts\Cinematic\Balloon.cs" />
-     <Compile Include="Assets\Scripts\Cinematic\Cutscene.cs" />
-     <Compile Include="Assets\Scripts\Cinematic\CutsceneIntro.cs" />
-     <Compile Include="Assets\Scripts\Cinematic\CutsceneIntro2.cs" />
-     <Compile Include="Assets\Scripts\Cinematic\ShowBFG.cs" />
-     <Compile Include="Assets\Scripts\Cinematic\TeleportSomethings.cs" />
-     <Compile Include="Assets\Scripts\ControlDoor.cs" />
-     <Compile Include="Assets\Scripts\ControlDoorTwo.cs" />
-     <Compile Include="Assets\Scripts\ControlManHole.cs" />
-     <Compile Include="Assets\Scripts\ControlMusic.cs" />
-     <Compile Include="Assets\Scripts\Core\game\BaseController.cs" />
-     <Compile Include="Assets\Scripts\Core\game\SplashScreen.cs" />
-     <Compile Include="Assets\Scripts\Core\util\BaseTimer.cs" />
-     <Compile Include="Assets\Scripts\Core\util\Button.cs" />
-     <Compile Include="Assets\Scripts\Core\util\ButtonBuy.cs" />
-     <Compile Include="Assets\Scripts\Core\util\ButtonLock.cs" />
-     <Compile Include="Assets\Scripts\Core\util\ClickSound.cs" />
-     <Compile Include="Assets\Scripts\Core\util\DragObject.cs" />
-     <Compile Include="Assets\Scripts\Core\util\SimpleButton.cs" />
-     <Compile Include="Assets\Scripts\HUD\HUDController.cs" />
-     <Compile Include="Assets\Scripts\InGame\Blink.cs" />
-     <Compile Include="Assets\Scripts\InGame\CharacterBeatenUp.cs" />
-     <Compile Include="Assets\Scripts\InGame\Coffe.cs" />
-     <Compile Include="Assets\Scripts\InGame\ControlCamera.cs" />
-     <Compile Include="Assets\Scripts\InGame\ControlEnemy.cs" />
-     <Compile Include="Assets\Scripts\InGame\Indicator.cs" />
-     <Compile Include="Assets\Scripts\InGame\PlayWall.cs" />
-     <Compile Include="Assets\Scripts\InGame\StopWall.cs" />
-     <Compile Include="Assets\Scripts\InGame\SuperJump.cs" />
-     <Compile Include="Assets\Scripts\Menu\KeyPress.cs" />
-     <Compile Include="Assets\Scripts\Triggers\CureTrigger.cs" />
-     <Compile Include="Assets\Scripts\Triggers\DamageTrigger.cs" />
-     <Compile Include="Assets\Scripts\Triggers\EnemyPunchTrigger.cs" />
-     <Compile Include="Assets\Scripts\Triggers\PunchTrigger.cs" />
-     <Compile Include="Assets\iTween\iTween.cs" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Bump_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_BumpSpec_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\!ToonyColorsPro Readme.txt" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_BumpSpec_Rim_OneLight.shader" />
-     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_BumpSpec_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Spec_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Bump_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Basic_Rim_OneLight.shader" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_BumpSpec_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_Basic_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Spec_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_BumpSpec_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_BumpSpec_Rim_OneLight.shader" />
-     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
-     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Bump_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Spec_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Basic_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_Bump_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Bump_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Spec_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Basic_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Spec_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Basic_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Basic_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Include.cginc" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Bump_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Bump_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Basic_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Spec_Rim_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_BumpSpec_OneLight.shader" />
-     <None Include="Assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_Spec_OneLight.shader" />
+     <Compile Include="assets\JMO Assets\Toony Colors Pro\Demo\Assets\GUIT_Button.cs" />
+     <Compile Include="assets\JMO Assets\Toony Colors Pro\Demo\Assets\GUIT_Button_Simple.cs" />
+     <Compile Include="assets\JMO Assets\Toony Colors Pro\Demo\Assets\GUIText_Color.cs" />
+     <Compile Include="assets\JMO Assets\Toony Colors Pro\Demo\Assets\TGPDemo.cs" />
+     <Compile Include="assets\iTween\iTween.cs" />
+     <Compile Include="assets\scripts\BeatenUpCamera.cs" />
+     <Compile Include="assets\scripts\ButtonInGame.cs" />
+     <Compile Include="assets\scripts\Character\Enemy.cs" />
+     <Compile Include="assets\scripts\Character\Margareth.cs" />
+     <Compile Include="assets\scripts\Character\Mordecai.cs" />
+     <Compile Include="assets\scripts\Character\Status.cs" />
+     <Compile Include="assets\scripts\Cinematic\AnimateCutscene.cs" />
+     <Compile Include="assets\scripts\Cinematic\Balloon.cs" />
+     <Compile Include="assets\scripts\Cinematic\Cutscene.cs" />
+     <Compile Include="assets\scripts\Cinematic\CutsceneIntro.cs" />
+     <Compile Include="assets\scripts\Cinematic\CutsceneIntro2.cs" />
+     <Compile Include="assets\scripts\Cinematic\ShowBFG.cs" />
+     <Compile Include="assets\scripts\Cinematic\TeleportSomethings.cs" />
+     <Compile Include="assets\scripts\ControlDoor.cs" />
+     <Compile Include="assets\scripts\ControlDoorTwo.cs" />
+     <Compile Include="assets\scripts\ControlManHole.cs" />
+     <Compile Include="assets\scripts\ControlMusic.cs" />
+     <Compile Include="assets\scripts\Core\game\BaseController.cs" />
+     <Compile Include="assets\scripts\Core\game\SplashScreen.cs" />
+     <Compile Include="assets\scripts\Core\util\BaseTimer.cs" />
+     <Compile Include="assets\scripts\Core\util\Button.cs" />
+     <Compile Include="assets\scripts\Core\util\ButtonBuy.cs" />
+     <Compile Include="assets\scripts\Core\util\ButtonLock.cs" />
+     <Compile Include="assets\scripts\Core\util\ClickSound.cs" />
+     <Compile Include="assets\scripts\Core\util\DragObject.cs" />
+     <Compile Include="assets\scripts\Core\util\SimpleButton.cs" />
+     <Compile Include="assets\scripts\GameOver\GameOverBehaviour.cs" />
+     <Compile Include="assets\scripts\HUD\HUDController.cs" />
+     <Compile Include="assets\scripts\InGame\Blink.cs" />
+     <Compile Include="assets\scripts\InGame\CharacterBeatenUp.cs" />
+     <Compile Include="assets\scripts\InGame\Coffe.cs" />
+     <Compile Include="assets\scripts\InGame\ControlCamera.cs" />
+     <Compile Include="assets\scripts\InGame\ControlEnemy.cs" />
+     <Compile Include="assets\scripts\InGame\Indicator.cs" />
+     <Compile Include="assets\scripts\InGame\PlayWall.cs" />
+     <Compile Include="assets\scripts\InGame\StopWall.cs" />
+     <Compile Include="assets\scripts\InGame\SuperJump.cs" />
+     <Compile Include="assets\scripts\Menu\KeyPress.cs" />
+     <Compile Include="assets\scripts\Triggers\CureTrigger.cs" />
+     <Compile Include="assets\scripts\Triggers\DamageTrigger.cs" />
+     <Compile Include="assets\scripts\Triggers\EnemyPunchTrigger.cs" />
+     <Compile Include="assets\scripts\Triggers\PunchTrigger.cs" />
+     <None Include="assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Bump_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_BumpSpec_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\!ToonyColorsPro Readme.txt" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_BumpSpec_Rim_OneLight.shader" />
+     <None Include="assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_BumpSpec_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Spec_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Bump_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Basic_Rim_OneLight.shader" />
+     <None Include="assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_BumpSpec_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_Basic_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Spec_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline.shader" />
+     <None Include="assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_BumpSpec_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_BumpSpec_Rim_OneLight.shader" />
+     <None Include="assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="assets\JMO Assets\!JMO Assets Readme.txt" />
+     <None Include="assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Bump_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Spec_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Basic_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_Bump_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Bump_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Spec_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_OutlineCst_Basic_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Spec_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Basic_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Basic_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Include.cginc" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Bump_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Bump_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Basic_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_Outline_Spec_Rim_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_BumpSpec_OneLight.shader" />
+     <None Include="assets\JMO Assets\Toony Colors Pro\Shaders\TGP_RimOutline_Spec_OneLight.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/JAM/game/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/JAM/gitnovo/JAM/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{C4670D74-53BA-CADB-D209-62996F2B0691}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{FE0BD690-E2C4-3650-C965-B08CB11456A0}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

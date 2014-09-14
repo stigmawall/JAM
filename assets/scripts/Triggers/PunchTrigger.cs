@@ -49,10 +49,23 @@ public class PunchTrigger : MonoBehaviour
 				vec.Normalize();
 				vec *= ( e.status.HP <= 0 ) ? 100 : 6;
 				col.rigidbody.AddForce(vec,ForceMode.Impulse);
-			}
+			} 
+
+
+
+			// efeito da porradona
+			// som
+			if( ( e.status.HP <= 0 ) )
+				GameObject.Find("SfxFinalPunch").GetComponent<AudioSource>().Play();
+			else 
+				// toca o som que acertou normal
+				_player.PlayPunchSound();
+
+
+
 			
 			if( respawnTime > 0 ) Invoke( "RestartItem", respawnTime );
-		}
+		} 
 	}
 	
 	

@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour
 
 	public Status status;
 	
+	public ControlEnemy controlEnemy; 
+
 
 
 
@@ -51,7 +53,9 @@ public class Enemy : MonoBehaviour
 
 	bool disable = false;
 
-	public ControlEnemy controlEnemy; 
+	AudioSource[] sfxMissPunch;
+	
+	AudioSource[] sfxPunch;
 
 	
 
@@ -66,6 +70,27 @@ public class Enemy : MonoBehaviour
 		status = GetComponent<Status>();
 		_punch = GetComponentInChildren<EnemyPunchTrigger>();
 		_punch.active = false;
+
+
+		sfxMissPunch = GameObject.Find("SoundEffects").transform.FindChild("SfxMissPunch").GetComponents<AudioSource>();
+		sfxPunch = GameObject.Find ("SoundEffects").transform.FindChild("SfxPunch").GetComponents<AudioSource>();
+	}
+
+
+
+
+	public void PlayMissedPunchSound() {
+		sfxMissPunch[ Random.Range(0, sfxMissPunch.Length) ].Play();
+	}
+	
+	
+	public void PlayPunchSound() 
+	{
+		// para todos os audios misseds
+		foreach( AudioSource a in sfxMissPunch ) { a.Stop(); }
+		
+		// toca um audio de que acertou
+		sfxPunch[ Random.Range(0, sfxPunch.Length) ].Play();
 	}
 
 
@@ -138,13 +163,16 @@ public class Enemy : MonoBehaviour
 				}
 				else { 
 					inv = 	target.GetComponent<Margareth>().invulnerable || 
-							target.GetComponent<Mordecai>().dying || 
-							target.GetComponent<Mordecai>().dead;
+							target.GetComponent<Margareth>().dying || 
+							target.GetComponent<Margareth>().dead;
 				}
 
 
-				if(!inv)
+				if(!inv) {
+					Debug.Log("teste");
+					PlayMissedPunchSound();
 					StartCoroutine( Punch() );
+				}
 			}
 		}
 
@@ -159,8 +187,8 @@ public class Enemy : MonoBehaviour
 	{
 		attacking = true;
 
-		WaitForSeconds[] weakPunches = { new WaitForSeconds(0.1f), new WaitForSeconds(0.2f) };
-		WaitForSeconds[] hardPunches = { new WaitForSeconds(0.5f), new WaitForSeconds(0.6f) };
+		WaitForSeconds[] weakPunches = { new WaitForSeconds(0.2f), new WaitForSeconds(0.4f) };
+		WaitForSeconds[] hardPunches = { new WaitForSeconds(0.4f), new WaitForSeconds(0.7f) };
 
 		//_animations[ AttackAnimations[ _animationCount ] ].speed = 1.5f;
 		_animations.CrossFade( AttackAnimations[ _animationCount ] );
@@ -199,6 +227,7 @@ public class Enemy : MonoBehaviour
 			StartCoroutine( Dying() );
 		} else {
 			StartCoroutine( GetHit() );
+			//iTween.ShakePosition( transform.FindChild("rig").gameObject, new Vector3(0.2f,0,0), 0.3f );
 		}
 
 		HUDController.instance.UpdateEnemyLifebarInfo( status.HP, status.MAXHP, picture, name );

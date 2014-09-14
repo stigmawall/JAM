@@ -10,6 +10,7 @@ public class HUDController : MonoBehaviour {
 	private static HUDController _instance;
 
 
+
 	
 	public SpriteRenderer lifebar;
 

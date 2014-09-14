@@ -47,9 +47,19 @@ public class TeleportSomethings : AnimateCutscene {
 		MeshRenderer mr = balloon.GetComponent<MeshRenderer>();
 		mr.renderer.enabled = false;	
 	}
-	
+
+
+
 	void playGame(){
-		
+		GameObject bg = GameObject.Find ("BGPlane");
+		iTween.FadeTo( bg.gameObject, 1, 1.4f );
+		Invoke ("GotoGame", 1.4f);
+	}
+
+
+
+	void GotoGame() {
+		Application.LoadLevel("level_full_3");
 	}
 
 }

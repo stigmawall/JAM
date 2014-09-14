@@ -43,6 +43,9 @@ public class EnemyPunchTrigger : MonoBehaviour
 			}
 
 
+			_enemy.PlayPunchSound();
+
+
 			// ultimo golpe = empurra o inimigo
 			// ou faz ele cair
 			// voadora - mesma coisa

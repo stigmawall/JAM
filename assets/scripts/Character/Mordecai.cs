@@ -65,11 +65,18 @@ public class Mordecai : MonoBehaviour
 
 	Status _status;
 
+	AudioSource[] sfxMissPunch;
+
+	AudioSource[] sfxPunch;
+
 	int _animationCount;
 
 	int _animationPlayed;
 
 	public bool isStand;
+
+
+
 
 
 	void Start() 
@@ -84,14 +91,36 @@ public class Mordecai : MonoBehaviour
 		_punch = GetComponentInChildren<PunchTrigger>();
 		_punch.active = false;
 
+
 		MeshRenderer mr = BlackMood.GetComponent<MeshRenderer>();
 		mr.renderer.enabled = false;
 
 		SpriteRenderer bm = AssistSprite.GetComponent<SpriteRenderer>();
 		bm.renderer.enabled = false;
-		//BlackMood;
+
+
+		sfxMissPunch = GameObject.Find("SoundEffects").transform.FindChild("SfxMissPunch").GetComponents<AudioSource>();
+		sfxPunch = GameObject.Find ("SoundEffects").transform.FindChild("SfxPunch").GetComponents<AudioSource>();
+	}
+
+
+
+
+	public void PlayMissedPunchSound() {
+		sfxMissPunch[ Random.Range(0, sfxMissPunch.Length) ].Play();
+	}
+
+
+	public void PlayPunchSound() 
+	{
+		// para todos os audios misseds
+		foreach( AudioSource a in sfxMissPunch ) { a.Stop(); }
+
+		// toca um audio de que acertou
+		sfxPunch[ Random.Range(0, sfxPunch.Length) ].Play();
 	}
 	
+
 
 
 
@@ -111,7 +140,7 @@ public class Mordecai : MonoBehaviour
 		{
 			isStand = false;
 			//_animations[JumpAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
+			_animations.Play( "Flick" ); // <<<< gambi da porra
 			_animations.CrossFade(JumpAnimation);
 
 		} 
@@ -126,7 +155,7 @@ public class Mordecai : MonoBehaviour
 		{
 			isStand = true;
 			//_animations[WalkAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
+			_animations.Play( "Flick" ); // <<<< gambi da porra
 			_animations[IdleAnimation].wrapMode = WrapMode.Loop;
 			_animations.CrossFade( IdleAnimation );
 		}
@@ -150,6 +179,8 @@ public class Mordecai : MonoBehaviour
 			} else {
 				StartCoroutine( FlyingKick() );
 			}
+
+			PlayMissedPunchSound();
 		}
 
 
@@ -161,7 +192,6 @@ public class Mordecai : MonoBehaviour
 
 			// congela o tempo
 			Time.timeScale = 0;
-
 
 
 			MeshRenderer mr = BlackMood.GetComponent<MeshRenderer>();
@@ -187,6 +217,10 @@ public class Mordecai : MonoBehaviour
 			            				"onComplete", "CalculateDamageAndReturnAssist",
 			            				"ignoretimescale", true,
 			            				"onCompleteTarget", gameObject ) );
+
+
+			// toca som
+			GameObject.Find("SfxSpecialPower").GetComponent<AudioSource>().Play();
 		}
 
 
@@ -288,9 +322,10 @@ public class Mordecai : MonoBehaviour
 		attacking = true;
 
 		WaitForSeconds[] weakPunches = { new WaitForSeconds(0.1f), new WaitForSeconds(0.2f) };
-		WaitForSeconds[] hardPunches = { new WaitForSeconds(0.5f), new WaitForSeconds(0.6f) };
+		WaitForSeconds[] hardPunches = { new WaitForSeconds(0.2f), new WaitForSeconds(0.5f) };
 
 
+		_animations[ AttackAnimations[ _animationCount ] ].speed = 1.5f;
 		_animations.Play( AttackAnimations[ _animationCount ] );
 		_animationCount++;
 
@@ -343,7 +378,9 @@ public class Mordecai : MonoBehaviour
 	{
 		hitted = true;
 		_animations.Play( HitAnimation );
+
 		yield return new WaitForSeconds( 0.4f );
+
 		hitted = false;
 		yield break;
 	}
@@ -390,15 +427,16 @@ public class Mordecai : MonoBehaviour
 			Vector3 p = transform.position;
 			p.y = 12;
 			transform.position = p;
+
+			_animations.Play( JumpAnimation );
 			dying = false;
 			Heal( _status.MAXHP );
-
 
 			// depois de um tempo, volta
 			yield return new WaitForSeconds( 1 );
 
 			// revive
-			animateState( CharacterBeatenUp.CharacterState.Jumping );
+			//animateState( CharacterBeatenUp.CharacterState.Jumping );
 			dead = false;
 
 			// causa dano  e treme
@@ -407,7 +445,8 @@ public class Mordecai : MonoBehaviour
 
 		} else {
 
-			Debug.Log ("GAME OVER");
+			//Debug.Log ("GAME OVER");
+			Application.LoadLevel( "gameover" );
 		}
 
 

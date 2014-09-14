@@ -20,6 +20,8 @@ public class Margareth : MonoBehaviour
 
 	public bool dying;
 
+	public bool dead;
+
 	public bool invulnerable;
 
 	Animation _animations;

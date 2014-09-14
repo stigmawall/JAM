@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CutsceneIntro : Cutscene {
 	enum Action { Talk, BFGComming, Wait };
-
+	
 	public GameObject modercai = null;
 	public GameObject margaret = null;
 	public GameObject bfg = null;
@@ -11,6 +11,11 @@ public class CutsceneIntro : Cutscene {
 
 	CutsceneIntro.Action action = CutsceneIntro.Action.Talk;
 
+
+	void Start() {
+		GameObject bg = GameObject.Find ("BGPlane");
+		iTween.FadeTo( bg.gameObject, 0, 1.4f );
+	}
 
 	void endCutscene(){
 		stop ();
