@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 6c055733830372743b7f0cafaac9051c
+guid: 53945e22edc5c7f4a8590f3e36dad39c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rigbyAssist
+    21300000: HUD_AssistBar
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

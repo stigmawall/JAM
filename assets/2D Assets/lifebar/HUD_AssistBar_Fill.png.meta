@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 6c055733830372743b7f0cafaac9051c
+guid: 2d46839d9ba455e499e2ca09a04b46ae
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rigbyAssist
+    21300000: HUD_AssistBar_Fill
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -35,7 +35,7 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
+  alignment: 1
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100

@@ -20,7 +20,7 @@ public class Status : MonoBehaviour {
 		get { return _HP; }
 		set {
 			value -= _Defense;
-			if( value <= 0 ) value = 1; // dano minimo
+			if( value < 0 ) value = 0;
 			_HP = ( value > _MAXHP ) ? _MAXHP : ( _HP-value <= 0 ) ? 0 : value; 
 		}
 	}

@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 6c055733830372743b7f0cafaac9051c
+guid: 79dff6a9a3c2f614c8f69ef06deab46a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: rigbyAssist
+    21300000: HUD_MordecaiBar
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

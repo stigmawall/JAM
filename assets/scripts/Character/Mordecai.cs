@@ -31,11 +31,23 @@ public class Mordecai : MonoBehaviour
 
 	public string IdleAnimation;
 
+
+	// managing assist effect
+
+	public SpriteRenderer AssistSprite;
+
+	public MeshRenderer BlackMood;
+
+
+
 	public bool attacking;
 
 	public bool hitted;
 
 	public bool dying;
+
+	public bool assisted;
+
 
 
 
@@ -122,6 +134,30 @@ public class Mordecai : MonoBehaviour
 			}
 		}
 
+		// chamando o assist 
+		if( Input.GetKeyDown( KeyCode.P ) && HUDController.instance.canUseAssist && !assisted ) 
+		{
+			// estado assistencia
+			assisted = true;
+
+			// congela o tempo
+			Time.timeScale = 0;
+
+			// fundo preto
+			Vector3 bp = BlackMood.gameObject.transform.localPosition;
+			bp.x = 2;
+			BlackMood.gameObject.transform.localPosition = bp;
+			iTween.FadeFrom( BlackMood.gameObject, 0, 0.5f );
+
+			// anima o sprite
+			iTween.MoveTo( AssistSprite.gameObject, 
+			              	iTween.Hash( "x", 15, "islocal", true,
+			            				"time", 1.4f, "easetype", iTween.EaseType.linear,
+			            				"onComplete", "CalculateDamageAndReturnAssist",
+			            				"ignoretimescale", true,
+			            				"onCompleteTarget", gameObject ) );
+		}
+
 
 		// para testes: animaçao caso seja atingido
 		if( Input.GetKey( KeyCode.I ) )  {
@@ -133,6 +169,47 @@ public class Mordecai : MonoBehaviour
 			StartCoroutine( Dying() );
 		}
 	}
+
+
+
+	// retorna o assist a posiçao original e reinicia o carregamento
+	public void CalculateDamageAndReturnAssist() 
+	{
+		// volta o tempo
+		Time.timeScale = 1;
+
+		// fundo preto
+		Vector3 bp = BlackMood.gameObject.transform.localPosition;
+		bp.x = -10;
+		BlackMood.gameObject.transform.localPosition = bp;
+
+		// retorna o sprite
+		iTween.MoveTo( AssistSprite.gameObject, iTween.Hash( "x", -15, "time", 0.01f ) );
+		assisted = false;
+
+		//reativa a barra de assist
+		HUDController.instance.StartAssist();
+
+		// desejo a todas inimigas vida longa #sqn
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach( GameObject ene in enemies ) 
+		{
+			Enemy e = ene.GetComponent<Enemy>();
+			e.TakeDamage( 150 );
+
+			// morreu? voa - odeio repetir, mas nao vi outra forma :/
+			if( e.status.HP <= 0 )
+			{
+				Vector3 vec = e.transform.position;
+				vec -= transform.position;
+				vec += Vector3.up;
+				vec.Normalize();
+				vec *= 100;
+				e.rigidbody.AddForce(vec,ForceMode.Impulse);
+			}
+		}
+	}
+
 
 
 
@@ -156,6 +233,9 @@ public class Mordecai : MonoBehaviour
 
 		// imprime o valor atual
 		Debug.Log ( "DAMAGE - " + _status.HP );
+
+		// atualiza a hud
+		HUDController.instance.UpdateLifebarInfo( _status.HP, _status.MAXHP );
 	}
 
 	

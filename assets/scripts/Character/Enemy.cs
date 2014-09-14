@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
 
 	void Update()
 	{
-		if( disable == true ){
+		if( disable == true || Time.timeScale == 0 ){
 			return;
 		}
 		// control animations
