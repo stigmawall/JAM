@@ -89,6 +89,7 @@
      <Compile Include="assets\scripts\InGame\StopWall.cs" />
      <Compile Include="assets\scripts\InGame\SuperJump.cs" />
      <Compile Include="assets\scripts\Menu\KeyPress.cs" />
+     <Compile Include="assets\scripts\Menu\Presentation.cs" />
      <Compile Include="assets\scripts\Triggers\CureTrigger.cs" />
      <Compile Include="assets\scripts\Triggers\DamageTrigger.cs" />
      <Compile Include="assets\scripts\Triggers\EnemyPunchTrigger.cs" />
