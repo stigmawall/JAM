@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class ControlDoorTwo : ControlDoor {
+	/*
 	public ButtonInGame button1 = null;
 	public ButtonInGame button2 = null;
 
@@ -16,4 +17,5 @@ public class ControlDoorTwo : ControlDoor {
 
 		}
 	}
+	*/
 }

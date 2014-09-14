@@ -24,7 +24,7 @@ public class Margareth : MonoBehaviour
 
 	public bool invulnerable;
 
-
+	public bool active = true;
 
 	Animation _animations;
 
@@ -50,7 +50,9 @@ public class Margareth : MonoBehaviour
 		if( Time.timeScale == 0 || dead || dying ){
 			return;
 		}
-
+		if (! active) {
+			return;
+		}
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0; 
@@ -60,9 +62,6 @@ public class Margareth : MonoBehaviour
 			iTween.RotateTo(gameObject,iTween.Hash("y",-90,"time",0.1f));
 		else 
 			iTween.RotateTo(gameObject,iTween.Hash("y",90,"time",0.1f));
-
-		//transform.LookAt( targetWithoutY );
-		//Debug.Log (target.position.y);
 
 
 
@@ -207,6 +206,7 @@ public class Margareth : MonoBehaviour
 		Destroy( this.gameObject );
 
 		// chama um gameover daqui
+		Application.LoadLevel ("gameover");
 		yield break;
 	}
 

@@ -27,7 +27,7 @@ public class ControlEnemy : MonoBehaviour {
 	GameObject [] enemy;
 
 	void setVisible(int index,bool visible){
-		Transform t = enemy[index].transform.Find("Mordecai.001");
+		Transform t = enemy[index].transform.Find("Plane.000");
 		t.gameObject.renderer.enabled = visible;
 	}
 

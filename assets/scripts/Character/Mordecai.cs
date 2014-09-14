@@ -447,6 +447,7 @@ public class Mordecai : MonoBehaviour
 
 		} else {
 
+
 			//Debug.Log ("GAME OVER");
 			Application.LoadLevel( "gameover" );
 		}

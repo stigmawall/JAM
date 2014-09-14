@@ -11,7 +11,7 @@ public class ButtonInGame : MonoBehaviour {
 		if(collision.gameObject.layer == 8 )//"Player"
 		{
 			collided = true;
-			doorTwoButtons.updateActionDoor();
+			//doorTwoButtons.updateActionDoor();
 		}
 	}
 

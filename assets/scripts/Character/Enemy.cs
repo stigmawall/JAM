@@ -66,7 +66,8 @@ public class Enemy : MonoBehaviour
 	 	//GameObject go = (GameObject)Instantiate(Resources.Load(pictureResource));
 		//picture = go.GetComponent<SpriteRenderer>();
 		//SpriteRenderer picture
-
+		target1 = GameObject.Find ("margaret").transform;
+		target2 = GameObject.Find ("mordecai").transform;
 		// escolhe qual dos adversarios ele vai
 		int esc = Random.Range(0,2);
 		Debug.Log ( esc );
