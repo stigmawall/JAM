@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
 	public Transform target;
 
 
+	public string name = "Unicorn";
+
+	public SpriteRenderer picture;
 
 	public string IdleAnimation;
 
@@ -18,7 +21,7 @@ public class Enemy : MonoBehaviour
 
 	public string[] AttackAnimations;
 	
-	public int distance = 1;
+	public float distance = 1;
 
 	public int index = 0;
 
@@ -47,45 +50,52 @@ public class Enemy : MonoBehaviour
 
 	public ControlEnemy controlEnemy; 
 
+
+
+
+
 	void Start() 
 	{
 		walking = attacking = hitted = dying = false;
 		_animations = (Animation)GetComponent(typeof(Animation));
 		status = GetComponent<Status>();
 		_punch = GetComponentInChildren<EnemyPunchTrigger>();
-
-
-
+		_punch.active = false;
 	}
+
+
+
 
 	void Update()
 	{
 		if( disable == true || Time.timeScale == 0 ){
 			return;
 		}
+
+
 		// control animations
-		if( dying ) {
-			controlEnemy.dieEnemy(index);
-			_animations.CrossFade( DieAnimation );
-			disable = true;
-			return;
-		} 
-		
-		else if( hitted ) {
-			_animations.CrossFade( HitAnimation );
-			return;
-		}
-		
-		else if( walking ) {
-			_animations.CrossFade( WalkAnimation );
-		}
-		
-		else if( attacking ) {
-			_animations.CrossFade( HitAnimation );
-		}
-		
-		else {
-			_animations.CrossFade( IdleAnimation );
+		if( !attacking ) 
+		{
+			if( dying ) 
+			{
+				if( controlEnemy ) 
+					controlEnemy.dieEnemy(index);
+
+				//_animations.CrossFade( DieAnimation );
+				disable = true;
+				return;
+			} 
+			
+			else if( hitted ) {
+				_animations.CrossFade( HitAnimation );
+				return;
+			}
+			else if( walking ) {
+				_animations.CrossFade( WalkAnimation );
+			}
+			else {
+				_animations.CrossFade( IdleAnimation );
+			}
 		}
 
 
@@ -100,15 +110,34 @@ public class Enemy : MonoBehaviour
 			iTween.RotateTo(gameObject,iTween.Hash("y",90,"time",0.1f));
 
 
-		if (dir.magnitude > distance )
+
+		if ( dir.magnitude > distance )
 		{
 			transform.position = Vector3.MoveTowards(transform.position, target.position, 0.06f);
 			walking = true;
 			//transform.position = Vector3.forward * 3 * Time.deltaTime;
-		} else {
+		} else 
+		{
 			walking = false;
-			if( !attacking || !hitted || !dying )
-				StartCoroutine( Punch() );
+			if( !attacking && !hitted && !dying ) 
+			{
+				bool inv;
+
+				if( target.GetComponent<Mordecai>() ) {
+					inv = 	target.GetComponent<Mordecai>().invulnerable || 
+							target.GetComponent<Mordecai>().dying || 
+							target.GetComponent<Mordecai>().dead;
+				}
+				else { 
+					inv = 	target.GetComponent<Margareth>().invulnerable || 
+							target.GetComponent<Mordecai>().dying || 
+							target.GetComponent<Mordecai>().dead;
+				}
+
+
+				if(!inv)
+					StartCoroutine( Punch() );
+			}
 		}
 
 	}
@@ -122,20 +151,25 @@ public class Enemy : MonoBehaviour
 	{
 		attacking = true;
 
-		_animations.CrossFade( AttackAnimations[ 0 ] );
+		WaitForSeconds[] weakPunches = { new WaitForSeconds(0.1f), new WaitForSeconds(0.2f) };
+		WaitForSeconds[] hardPunches = { new WaitForSeconds(0.5f), new WaitForSeconds(0.6f) };
+
+		//_animations[ AttackAnimations[ _animationCount ] ].speed = 1.5f;
+		_animations.CrossFade( AttackAnimations[ _animationCount ] );
 		_animationCount++;
 
-		yield return new WaitForSeconds( 0.1f );
-
+		// controla tempo de apariçao da bouding box
+		yield return ( _animationCount >= AttackAnimations.Length ) ? hardPunches[0] : weakPunches[0];
+		
 		_punch.active = true;
-
-		yield return new WaitForSeconds( 0.3f );
-
+		
+		yield return ( _animationCount >= AttackAnimations.Length ) ? hardPunches[1] : weakPunches[1];
+		
 		_punch.active = false;
 		_animationPlayed++;
 		attacking = false;
 		
-		if( _animationPlayed >=  AttackAnimations.Length ) 
+		if( _animationPlayed >=  AttackAnimations.Length || !_punch.collided )  
 			_animationCount = _animationPlayed =  0;
 		
 		
@@ -158,9 +192,10 @@ public class Enemy : MonoBehaviour
 		} else {
 			StartCoroutine( GetHit() );
 		}
-		
+
+		HUDController.instance.UpdateEnemyLifebarInfo( status.HP, status.MAXHP, picture, name );
 		// imprime o valor atual
-		Debug.Log ( "DAMAGE ENEMY - " + status.HP );
+		//Debug.Log ( "DAMAGE ENEMY - " + status.HP );
 	}
 
 
@@ -170,7 +205,9 @@ public class Enemy : MonoBehaviour
 	{
 		status.Heal(value);
 		if( status.HP >= status.MAXHP ) status.HP = status.MAXHP;
-		Debug.Log ( "HEAL ENEMY - " + status.HP );
+
+		HUDController.instance.UpdateEnemyLifebarInfo( status.HP, status.MAXHP, picture, name );
+		//Debug.Log ( "HEAL ENEMY - " + status.HP );
 	}
 
 
@@ -193,20 +230,23 @@ public class Enemy : MonoBehaviour
 	
 	
 	/// <summary>
-	/// Animate the payer to die
+	/// Animate the enemy to die
+	/// na real ele vai voar longe
 	/// </summary>
 	IEnumerator Dying()
 	{
 		dying = true;
-		_animations.CrossFade( DieAnimation );
-		yield return new WaitForSeconds( 3 );
-
+		//_animations.CrossFade( DieAnimation );
+		yield return new WaitForSeconds( 0.5f );
 		Destroy( this.gameObject );
-		//// nao cancela na real, mas para testes, sim
-		//dying = false;
 		yield break;
 	}
 
 
+
+
+	public int animationCount {
+		get { return _animationCount; }
+	}
 
 }

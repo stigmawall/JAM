@@ -20,6 +20,8 @@ public class Margareth : MonoBehaviour
 
 	public bool dying;
 
+	public bool invulnerable;
+
 	Animation _animations;
 
 	Status _status;
@@ -107,6 +109,8 @@ public class Margareth : MonoBehaviour
 	// STATUS CONTROLLERS
 	public void TakeDamage( float damage ) 
 	{
+		if( invulnerable ) return;
+
 		// marca o dano
 		_status.Damage(damage);
 		
@@ -122,12 +126,45 @@ public class Margareth : MonoBehaviour
 		Debug.Log ( "DAMAGE MAGGIE - " + _status.HP );
 	}
 	
-	
+
+
+
 	public void Heal( float value ) 
 	{
 		_status.Heal(value);
 		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
 		Debug.Log ( "HEAL MAGGIE - " + _status.HP );
+	}
+
+
+
+
+
+	// mostra o personagem caindo e ganhando invulnerabilidade por um tempo
+	public void Fall() 
+	{
+		invulnerable = true;
+		StartCoroutine( BlinkChar() );
+	}
+	
+	
+	
+	
+	// pisca o personagem e retorna de ser invulneravel ao termino
+	IEnumerator BlinkChar() 
+	{
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );		
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		invulnerable = false;
 	}
 
 

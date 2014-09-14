@@ -9,10 +9,12 @@ public class CharacterBeatenUp : MonoBehaviour {
 	public float speed = 6.0F;
 	public float jumpSpeed = 8.0F;
 	public float gravity = 20.0F;
-	private Vector3 moveDirection = Vector3.zero;
 
 	public float x = 0.0F;
 	public float z = 0.0F;
+
+
+	private Vector3 moveDirection = Vector3.zero;
 
 
 	bool antGround = false;
@@ -30,11 +32,13 @@ public class CharacterBeatenUp : MonoBehaviour {
 	void Start () {
 		hero = GetComponent<Mordecai> ();
 	}
+
+
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if( hero.dying ) return;
+		if( hero.dying || hero.hitted || !hero.controlling ) return;
 
 		x = 0.0F;
 		z = 0.0F;
@@ -76,9 +80,8 @@ public class CharacterBeatenUp : MonoBehaviour {
 			moveDirection.z = z;
 
 
-			if (Input.GetButton("Jump") )
+			if ( Input.GetButton("Jump") )
 			{
-				//moveDirection = Vector3.zero;
 				moveDirection.y = jumpSpeed;
 				state = CharacterState.Jumping;
 			}
@@ -98,5 +101,6 @@ public class CharacterBeatenUp : MonoBehaviour {
 			moveDirection = Vector3.zero;
 		}
 	}
+
 
 }

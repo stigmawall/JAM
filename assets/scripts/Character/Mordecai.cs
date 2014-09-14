@@ -50,6 +50,10 @@ public class Mordecai : MonoBehaviour
 
 	public bool assisted;
 
+	public bool controlling;
+
+	public bool invulnerable;
+
 
 
 
@@ -70,6 +74,7 @@ public class Mordecai : MonoBehaviour
 
 	void Start() 
 	{
+		controlling = true;
 		attacking = hitted = dying = dead = false;
 		_animationCount = _animationPlayed = 0;
 		isStand = true;
@@ -99,7 +104,7 @@ public class Mordecai : MonoBehaviour
 		{
 			isStand = false;
 			//_animations[JumpAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			//_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
+			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
 			_animations.CrossFade(JumpAnimation);
 
 		} 
@@ -114,7 +119,7 @@ public class Mordecai : MonoBehaviour
 		{
 			isStand = true;
 			//_animations[WalkAnimation].speed = Mathf.Clamp(controller.velocity.magnitude, 0, runMaxAnimationSpeed);
-			//_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
+			_animations.Play( "rig_mullet|Attack 1_Recover" ); // <<<< gambi da porra
 			_animations[IdleAnimation].wrapMode = WrapMode.Loop;
 			_animations.CrossFade( IdleAnimation );
 		}
@@ -124,8 +129,8 @@ public class Mordecai : MonoBehaviour
 
 	void Update()
 	{
-		// Se estiver morrendo, nada faz
-		if( dying ) return;
+		// Se estiver morrendo ou sem controle, nada faz
+		if( dying || hitted || !controlling ) return;
 
 
 		// atacando - no chao e no ar
@@ -210,6 +215,7 @@ public class Mordecai : MonoBehaviour
 	// STATUS CONTROLLERS
 	public void TakeDamage( float damage ) 
 	{
+		if( invulnerable ) return;
 
 		// marca o dano
 		_status.Damage( damage );
@@ -218,9 +224,8 @@ public class Mordecai : MonoBehaviour
 		{
 			StartCoroutine( Dying() );
 		} else {
-
 			StartCoroutine( GetHit() );
-			iTween.ShakePosition( this.gameObject, new Vector3(0.4f,0,0), 0.6f );
+			iTween.ShakePosition( transform.FindChild("rig_mullet").gameObject, new Vector3(0.2f,0,0), 0.3f );
 		}
 
 		// imprime o valor atual
@@ -413,6 +418,36 @@ public class Mordecai : MonoBehaviour
 		}
 	}
 
+
+
+
+
+	// mostra o personagem caindo e ganhando invulnerabilidade por um tempo
+	public void Fall() 
+	{
+		invulnerable = true;
+		StartCoroutine( BlinkChar() );
+	}
+
+
+
+
+	// pisca o personagem e retorna de ser invulneravel ao termino
+	IEnumerator BlinkChar() 
+	{
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );		
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+		yield return new WaitForSeconds( 0.2f );
+		GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+		invulnerable = false;
+	}
 
 
 

@@ -15,6 +15,10 @@ public class HUDController : MonoBehaviour {
 
 	public SpriteRenderer assistbar;
 
+	public SpriteRenderer enemylife;
+
+	public SpriteRenderer enemylifebar;
+
 	public float AssistMaxTime = 5;
 
 	public bool canUseAssist = false;
@@ -23,6 +27,9 @@ public class HUDController : MonoBehaviour {
 
 
 
+
+
+	SpriteRenderer actualPic;
 	
 	bool _assistActive;
 
@@ -63,6 +70,7 @@ public class HUDController : MonoBehaviour {
 			if(this != _instance) Destroy(this.gameObject);
 		}
 
+		RemoveEnemyStatus();
 		StartAssist();
 	}
 
@@ -119,5 +127,41 @@ public class HUDController : MonoBehaviour {
 		if( pos.x < 0 ) pos.x = 0;
 		lifebar.gameObject.transform.localScale = pos;
 	}
+
+
+
+	public void UpdateEnemyLifebarInfo( float hp, float max, SpriteRenderer pic, string name )
+	{
+		// caso esqueça de setar o lifebar
+		if(enemylifebar==null) 
+		{
+			Debug.Log ("Da um setada no EnemyLifebar");
+			return;
+		}
+		
+		Vector3 pos = enemylifebar.gameObject.transform.localScale;
+		pos.x = hp / max;
+		if( pos.x < 0 ) pos.x = 0;
+		enemylifebar.gameObject.transform.localScale = pos;
+
+		// show pic
+		enemylife.enabled = true;
+		enemylifebar.enabled = true;
+		if(actualPic) actualPic.enabled = false;
+		pic.enabled = true;
+		actualPic = pic;
+
+		// remove se demorar demais pra bater
+		Invoke ( "RemoveEnemyStatus", 3 );
+	}
+
+
+	public void RemoveEnemyStatus() 
+	{
+		enemylife.enabled = false;
+		enemylifebar.enabled = false;
+		if(actualPic) actualPic.enabled = false;
+	}
+
 
 }

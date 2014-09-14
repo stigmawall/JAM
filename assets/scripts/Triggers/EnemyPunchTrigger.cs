@@ -9,9 +9,10 @@ public class EnemyPunchTrigger : MonoBehaviour
 
 	public bool active = false;
 
+	public bool collided = false;
+
 	Enemy _enemy;
 
-	bool _collided = false;
 
 
 
@@ -25,12 +26,12 @@ public class EnemyPunchTrigger : MonoBehaviour
 	
 	void OnTriggerStay( Collider col ) 
 	{
-		if( _collided || !active ) return;
+		if( collided || !active ) return;
 	
 
 		if( col.tag == "Player" ) 
 		{
-			_collided = true;
+			collided = true;
 
 
 			if( col.GetComponent<Mordecai>() ) 
@@ -42,12 +43,20 @@ public class EnemyPunchTrigger : MonoBehaviour
 			}
 
 
+			// ultimo golpe = empurra o inimigo
+			// ou faz ele cair
+			// voadora - mesma coisa
+			if( _enemy.animationCount >= _enemy.AttackAnimations.Length ) {
+				col.GetComponent<Mordecai>().Fall();
+			}
+
+
 			
 			if( respawnTime > 0 ) Invoke( "RestartItem", respawnTime );
 		}
 	}
 	
 	
-	void RestartItem() { _collided = false; }
+	void RestartItem() { collided = false; }
 
 }

@@ -21,12 +21,17 @@ public class Status : MonoBehaviour {
 	}
 
 
-	public void Damage( float value ) {
-		_HP -= ( value - _Defense );
+	public void Damage( float value ) 
+	{
+		if( value - _Defense <= 0 )
+			_HP -= 1;
+		else
+			_HP -= ( value - _Defense );
+
 		if( _HP < 0 ) _HP = 0;
 	}
 
-
+	
 	public float HP {
 		get { return _HP; }
 		set { _HP = value; }
