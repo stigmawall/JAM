@@ -174,7 +174,7 @@ public class Mordecai : MonoBehaviour
 
 			// fundo preto
 			Vector3 bp = BlackMood.gameObject.transform.localPosition;
-			bp.x = -5;
+			bp.x = 2;
 			BlackMood.gameObject.transform.localPosition = bp;
 			iTween.FadeTo( BlackMood.gameObject, 0, 0.01f );
 			iTween.FadeTo( BlackMood.gameObject, 0.4f, 1 );
@@ -211,7 +211,7 @@ public class Mordecai : MonoBehaviour
 
 		// fundo preto
 		Vector3 bp = BlackMood.gameObject.transform.localPosition;
-		bp.x = -20;
+		bp.x = -10;
 		BlackMood.gameObject.transform.localPosition = bp;
 
 		// retorna o sprite
