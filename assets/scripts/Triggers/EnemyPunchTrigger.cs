@@ -27,16 +27,20 @@ public class EnemyPunchTrigger : MonoBehaviour
 	{
 		if( _collided || !active ) return;
 	
+
 		if( col.tag == "Player" ) 
 		{
 			_collided = true;
 
+
 			if( col.GetComponent<Mordecai>() ) 
 			{
-				col.GetComponent<Mordecai>().TakeDamage( _enemy.GetComponent<Status>().Power );
+				if( !col.GetComponent<Mordecai>().dead && !col.GetComponent<Mordecai>().dying )
+					col.GetComponent<Mordecai>().TakeDamage( _enemy.GetComponent<Status>().Power );
 			} else {
 				col.GetComponent<Margareth>().TakeDamage( _enemy.GetComponent<Status>().Power );
 			}
+
 
 			
 			if( respawnTime > 0 ) Invoke( "RestartItem", respawnTime );

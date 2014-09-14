@@ -40,10 +40,11 @@ public class Margareth : MonoBehaviour
 		if( Time.timeScale == 0 ){
 			return;
 		}
+
 		// verifica a distancia em que estao, ignorando o Y
 		Vector3 dir = target.position - transform.position;
 		dir.y = 0; 
-		//transform.LookAt( target );
+
 		
 		if( dir.x < 0 ) 
 			iTween.RotateTo(gameObject,iTween.Hash("y",-90,"time",0.1f));
@@ -57,16 +58,18 @@ public class Margareth : MonoBehaviour
 
 		if (dir.magnitude > 5 && (target.position.y >= limit))
 		{
+			/*
 			Vector3 pos = new Vector3(
 				target.position.x,
 				target.position.y,
 				limit
-				);
+			);
 
-			//target.position
+			transform.position = Vector3.MoveTowards(transform.position, pos, 0.06f);
+			*/
 
-				transform.position = Vector3.MoveTowards(transform.position, pos, 0.06f);
-				walking = true;
+			transform.position = Vector3.MoveTowards(transform.position, target.position, 0.06f);
+			walking = true;
 			//transform.position = Vector3.forward * 3 * Time.deltaTime;
 		} else {
 			walking = false;
@@ -105,7 +108,7 @@ public class Margareth : MonoBehaviour
 	public void TakeDamage( float damage ) 
 	{
 		// marca o dano
-		_status.HP -= damage;
+		_status.Damage(damage);
 		
 		if( _status.HP <= 0 ) 
 		{
@@ -122,7 +125,7 @@ public class Margareth : MonoBehaviour
 	
 	public void Heal( float value ) 
 	{
-		_status.HP += value;
+		_status.Heal(value);
 		if( _status.HP >= _status.MAXHP ) _status.HP = _status.MAXHP;
 		Debug.Log ( "HEAL MAGGIE - " + _status.HP );
 	}

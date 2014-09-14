@@ -34,6 +34,8 @@ public class CharacterBeatenUp : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if( hero.dying ) return;
+
 		x = 0.0F;
 		z = 0.0F;
 

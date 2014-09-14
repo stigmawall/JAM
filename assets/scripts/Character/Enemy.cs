@@ -150,7 +150,7 @@ public class Enemy : MonoBehaviour
 	public void TakeDamage( float damage ) 
 	{
 		// marca o dano
-		status.HP -= damage;
+		status.Damage(damage);
 		
 		if( status.HP <= 0 ) 
 		{
@@ -168,7 +168,7 @@ public class Enemy : MonoBehaviour
 	
 	public void Heal( float value ) 
 	{
-		status.HP += value;
+		status.Heal(value);
 		if( status.HP >= status.MAXHP ) status.HP = status.MAXHP;
 		Debug.Log ( "HEAL ENEMY - " + status.HP );
 	}
